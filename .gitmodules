@@ -52,3 +52,6 @@
 [submodule "sites/all/libraries/flexslider"]
 	path = sites/all/libraries/flexslider
 	url = https://github.com/woothemes/FlexSlider
+[submodule "sites/all/modules/custom/luggage-biblio"]
+	path = sites/all/modules/custom/luggage-biblio
+	url = git@bitbucket.org:isuitc/luggage-biblio.git
