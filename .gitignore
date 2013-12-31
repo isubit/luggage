@@ -1,6 +1,19 @@
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
+
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
 
 # Ignore paths that contain user-generated content.
+files
 sites/*/files
 sites/*/private
+
+# Ignore paths that contain developer tools.
+sites/all/modules/devel
+sites/all/moduels/devel_themer
+sites/all/modules/get_form_id
+sites/all/modules/hacked
+sites/all/modules/security_review
+sites/all/modules/simplehtmldom
