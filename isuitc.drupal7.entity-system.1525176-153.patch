@@ -7,6 +7,7 @@ index 25f7584..384e51e 100644
        foreach ($entities as $entity) {
          $entity_values = (array) $entity;
 -        if (array_diff_assoc($conditions, $entity_values)) {
++        // if (array_diff_assoc($conditions, $entity_values)) {
 +        if (drupal_array_diff_assoc_recursive($conditions, $entity_values)) {
            unset($entities[$entity->{$this->idKey}]);
          }
@@ -96,9 +97,12 @@ index 665f9ae..fdf354b 100644
  
 -    // Get the node.
 -    $node = $this->drupalGetNodeByTitle($edit["title"]);
++    // Get the node.
++    //$node = $this->drupalGetNodeByTitle($edit["title"]);
 +    // Get the node and verify that the terms that should be there still are.
      $this->drupalGet('node/' . $node->nid);
 -
++    //
      foreach ($term_names as $term_name) {
        $this->assertText($term_name, format_string('The term %name appears on the node page after one term %deleted was deleted', array('%name' => $term_name, '%deleted' => $term_objects['term1']->name)));
      }
