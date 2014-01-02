@@ -39,18 +39,20 @@ Assumptions:
 * Drush is installed.
 * You are located at the root of an existing Git repository.
 
-	git remote add luggage git@bitbucket.org:isuitc/luggage.git
-	git pull luggage master
-	git submodule init
-	git submodule update
-	git add *
-	git commit -m "luggage"
-	git push origin master
-	drush si minimal -y --db-url=mysql://root:root@localhost/myproject --site-name=myproject --account-name=isuitc install_configure_form.update_status_module='array(FALSE,FALSE)'
-	drush en -y piwik_config pubcookie_config set_corevars global_seo global_coreenabled global_otherenabled global_roles ckeditor_config enable_ui_modules solr_config news announcements people suitcase_config
-	drush fra -y
-	drush cc all
-	drush @self uli
+```
+git remote add luggage git@bitbucket.org:isuitc/luggage.git
+git pull luggage master
+git submodule init
+git submodule update
+git add *
+git commit -m "luggage"
+git push origin master
+drush si minimal -y --db-url=mysql://root:root@localhost/myproject --site-name=myproject --account-name=isuitc install_configure_form.update_status_module='array(FALSE,FALSE)'
+drush en -y piwik_config pubcookie_config set_corevars global_seo global_coreenabled global_otherenabled global_roles ckeditor_config enable_ui_modules solr_config news announcements people suitcase_config
+drush fra -y
+drush cc all
+drush @self uli
+```
 
 License
 ----
