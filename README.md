@@ -40,7 +40,7 @@ Assumptions:
 * You are located at the root of an existing Git repository.
 
 	git remote add luggage git@bitbucket.org:isuitc/luggage.git
-	git pull luggage 1.0.0
+	git pull luggage master
 	git submodule init
 	git submodule update
 	git add *
