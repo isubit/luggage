@@ -1,9 +1,6 @@
 [submodule "sites/all/themes/suitcase"]
 	path = sites/all/themes/suitcase
 	url = git@bitbucket.org:isuitc/suitcase.git
-[submodule "sites/all/libraries/ckeditor"]
-	path = sites/all/libraries/ckeditor
-	url = https://github.com/ckeditor/ckeditor-releases.git
 [submodule "sites/all/libraries/flexslider"]
 	path = sites/all/libraries/flexslider
 	url = https://github.com/woothemes/FlexSlider
