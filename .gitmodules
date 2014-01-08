@@ -43,3 +43,12 @@
 [submodule "sites/all/modules/custom/suitcase_config"]
 	path = sites/all/modules/custom/suitcase_config
 	url = git@bitbucket.org:isuitc/suitcase_config.git
+[submodule "sites/all/modules/custom/luggage_vars"]
+	path = sites/all/modules/custom/luggage_vars
+	url = git@bitbucket.org:isuitc/luggage_vars.git
+[submodule "sites/all/modules/custom/luggage_solr"]
+	path = sites/all/modules/custom/luggage_solr
+	url = git@bitbucket.org:isuitc/luggage_solr.git
+[submodule "sites/all/modules/custom/luggage_biblio"]
+	path = sites/all/modules/custom/luggage_biblio
+	url = git@bitbucket.org:isuitc/luggage_biblio.git
