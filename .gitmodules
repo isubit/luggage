@@ -46,3 +46,9 @@
 [submodule "sites/all/modules/custom/luggage_biblio"]
 	path = sites/all/modules/custom/luggage_biblio
 	url = git@bitbucket.org:isuitc/luggage_biblio.git
+[submodule "sites/all/libraries/ckeditor"]
+	path = sites/all/libraries/ckeditor
+	url = https://github.com/ckeditor/ckeditor-releases.git
+[submodule "sites/all/libraries/flexslider"]
+	path = sites/all/libraries/flexslider
+	url = https://github.com/woothemes/FlexSlider
