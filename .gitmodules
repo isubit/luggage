@@ -1,6 +1,9 @@
 [submodule "sites/all/themes/suitcase"]
 	path = sites/all/themes/suitcase
 	url = git@bitbucket.org:isuitc/suitcase.git
+[submodule "sites/all/modules/custom/suitcase_config"]
+	path = sites/all/modules/custom/suitcase_config
+	url = git@bitbucket.org:isuitc/suitcase_config.git
 [submodule "sites/all/modules/custom/luggage_announcements"]
 	path = sites/all/modules/custom/luggage_announcements
 	url = git@bitbucket.org:isuitc/luggage_announcements.git
@@ -34,9 +37,6 @@
 [submodule "sites/all/modules/custom/luggage_pubcookie"]
 	path = sites/all/modules/custom/luggage_pubcookie
 	url = git@bitbucket.org:isuitc/luggage_pubcookie.git
-[submodule "sites/all/modules/custom/suitcase_config"]
-	path = sites/all/modules/custom/suitcase_config
-	url = git@bitbucket.org:isuitc/suitcase_config.git
 [submodule "sites/all/modules/custom/luggage_vars"]
 	path = sites/all/modules/custom/luggage_vars
 	url = git@bitbucket.org:isuitc/luggage_vars.git
@@ -46,6 +46,3 @@
 [submodule "sites/all/modules/custom/luggage_biblio"]
 	path = sites/all/modules/custom/luggage_biblio
 	url = git@bitbucket.org:isuitc/luggage_biblio.git
-[submodule "sites/all/libraries/ckeditor"]
-	path = sites/all/libraries/ckeditor
-	url = https://github.com/ckeditor/ckeditor-releases.git
