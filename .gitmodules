@@ -49,3 +49,6 @@
 [submodule "sites/all/modules/luggage/suitcase_config"]
 	path = sites/all/modules/luggage/suitcase_config
 	url = git@bitbucket.org:isuitc/suitcase_config.git
+[submodule "sites/all/modules/luggage/luggage_biblio"]
+	path = sites/all/modules/luggage/luggage_biblio
+	url = git@bitbucket.org:isuitc/luggage_biblio.git
