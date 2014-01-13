@@ -1,54 +1,9 @@
-[submodule "sites/all/themes/suitcase"]
-	path = sites/all/themes/suitcase
-	url = git@bitbucket.org:isuitc/suitcase.git
-[submodule "sites/all/modules/custom/suitcase_config"]
-	path = sites/all/modules/custom/suitcase_config
-	url = git@bitbucket.org:isuitc/suitcase_config.git
-[submodule "sites/all/modules/custom/luggage_announcements"]
-	path = sites/all/modules/custom/luggage_announcements
-	url = git@bitbucket.org:isuitc/luggage_announcements.git
-[submodule "sites/all/modules/custom/luggage_ckeditor"]
-	path = sites/all/modules/custom/luggage_ckeditor
-	url = git@bitbucket.org:isuitc/luggage_ckeditor.git
-[submodule "sites/all/modules/custom/luggage_ui"]
-	path = sites/all/modules/custom/luggage_ui
-	url = git@bitbucket.org:isuitc/luggage_ui.git
-[submodule "sites/all/modules/custom/luggage_core"]
-	path = sites/all/modules/custom/luggage_core
-	url = git@bitbucket.org:isuitc/luggage_core.git
-[submodule "sites/all/modules/custom/luggage_contrib"]
-	path = sites/all/modules/custom/luggage_contrib
-	url = git@bitbucket.org:isuitc/luggage_contrib.git
-[submodule "sites/all/modules/custom/luggage_roles"]
-	path = sites/all/modules/custom/luggage_roles
-	url = git@bitbucket.org:isuitc/luggage_roles.git
-[submodule "sites/all/modules/custom/luggage_seo"]
-	path = sites/all/modules/custom/luggage_seo
-	url = git@bitbucket.org:isuitc/luggage_seo.git
-[submodule "sites/all/modules/custom/luggage_news"]
-	path = sites/all/modules/custom/luggage_news
-	url = git@bitbucket.org:isuitc/luggage_news.git
-[submodule "sites/all/modules/custom/luggage_people"]
-	path = sites/all/modules/custom/luggage_people
-	url = git@bitbucket.org:isuitc/luggage_people.git
-[submodule "sites/all/modules/custom/luggage_piwik"]
-	path = sites/all/modules/custom/luggage_piwik
-	url = git@bitbucket.org:isuitc/luggage_piwik.git
-[submodule "sites/all/modules/custom/luggage_pubcookie"]
-	path = sites/all/modules/custom/luggage_pubcookie
-	url = git@bitbucket.org:isuitc/luggage_pubcookie.git
-[submodule "sites/all/modules/custom/luggage_vars"]
-	path = sites/all/modules/custom/luggage_vars
-	url = git@bitbucket.org:isuitc/luggage_vars.git
-[submodule "sites/all/modules/custom/luggage_solr"]
-	path = sites/all/modules/custom/luggage_solr
-	url = git@bitbucket.org:isuitc/luggage_solr.git
-[submodule "sites/all/modules/custom/luggage_biblio"]
-	path = sites/all/modules/custom/luggage_biblio
-	url = git@bitbucket.org:isuitc/luggage_biblio.git
 [submodule "sites/all/libraries/ckeditor"]
 	path = sites/all/libraries/ckeditor
 	url = https://github.com/ckeditor/ckeditor-releases.git
 [submodule "sites/all/libraries/flexslider"]
 	path = sites/all/libraries/flexslider
 	url = https://github.com/woothemes/FlexSlider
+[submodule "sites/all/themes/suitcase"]
+	path = sites/all/themes/suitcase
+	url = git@bitbucket.org:isuitc/suitcase.git
