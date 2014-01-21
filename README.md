@@ -35,21 +35,33 @@ Luggage uses a number of open source projects to work properly:
 Installation
 --------------
 
+The instructions below build a complete luggage with all the features, supporting modules and the suitcase theme.
+
 Assumptions:
 * Drush is installed.
 * You are located at the root of an existing Git repository.
 
 ```
+# Connect your git repo to the luggage git repo
 git remote add luggage git@bitbucket.org:isuitc/luggage.git
+# Bring the luggage code in
 git pull luggage master
+# Initialize and retrieve submodules from their own git repos
 git submodule init
 git submodule update
-git add *
+# The following three commands add your new pristine codebase to your repo --
+# the one you created before you added the git remote.
+git add -A
 git commit -m "picking up luggage"
 git push origin master
-drush si minimal -y --db-url=mysql://root:root@localhost/myproject --site-name=myproject --account-name=isuitc install_configure_form.update_status_module='array(FALSE,FALSE)'
-drush en -y piwik_config pubcookie_config set_corevars global_seo global_coreenabled global_otherenabled global_roles ckeditor_config enable_ui_modules solr_config news announcements people suitcase_config
+# Set up a fresh Drupal. If you don't have $DBCREDS defined substitute your
+# database username and password in the following command, e.g., root:root
+drush si minimal -y --db-url=mysql://$DBCREDS@localhost/myproject --site-name=myproject --account-name=isuitc install_configure_form.update_status_module='array(FALSE,FALSE)'
+# Enable luggage Drupal modules
+drush en -y luggage_piwik luggage_pubcookie luggage_vars luggage_seo luggage_core luggage_contrib luggage_roles luggage_ckeditor luggage_ui luggage_solr luggage_news luggage_announcements luggage_people suitcase_config
+# Reset features to their original configuration settings
 drush fra -y
+# Clear caches and log in
 drush cc all
 drush @self uli
 ```
