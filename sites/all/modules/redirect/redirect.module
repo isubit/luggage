@@ -987,9 +987,13 @@ function redirect_redirect($redirect = NULL) {
   }
   else {
     // For now don't trigger an error if being run inside SimpleTest.
+    // Patch by -JV
+    // No reason to tell user about a prevented infinite redirect.
+    /*
     if (empty($GLOBALS['drupal_test_info']['test_run_id'])) {
       trigger_error(t('Infinite redirect loop prevented.'), E_USER_WARNING);
     }
+    */
     return FALSE;
   }
 
