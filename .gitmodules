@@ -52,3 +52,6 @@
 [submodule "sites/all/modules/luggage/luggage_biblio"]
 	path = sites/all/modules/luggage/luggage_biblio
 	url = git@bitbucket.org:isuitc/luggage_biblio.git
+[submodule "sites/all/modules/luggage/suitcase_ckeditor_overrides"]
+	path = sites/all/modules/luggage/suitcase_ckeditor_overrides
+	url = git@bitbucket.org:isuitc/suitcase_ckeditor_overrides.git
