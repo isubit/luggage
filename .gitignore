@@ -13,7 +13,7 @@ sites/*/private
 
 # Ignore paths that contain developer tools.
 sites/all/modules/devel
-sites/all/moduels/devel_themer
+sites/all/modules/devel_themer
 sites/all/modules/get_form_id
 sites/all/modules/hacked
 sites/all/modules/security_review
