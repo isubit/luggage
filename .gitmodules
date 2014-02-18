@@ -40,3 +40,6 @@
 [submodule "sites/all/modules/luggage/luggage_vars"]
 	path = sites/all/modules/luggage/luggage_vars
 	url = git@bitbucket.org:isuitc/luggage_vars.git
+[submodule "sites/all/modules/luggage/luggage_projects"]
+	path = sites/all/modules/luggage/luggage_projects
+	url = git@bitbucket.org:isuitc/luggage_projects.git
