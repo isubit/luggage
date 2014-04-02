@@ -17,7 +17,7 @@ Luggage is a managed stable release of Drupal 7.x coupled with several features 
 Version
 ----
 
-1.0.0
+2.x.x
 
 Technology
 -----------
