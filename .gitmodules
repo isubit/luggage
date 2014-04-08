@@ -46,3 +46,7 @@
 [submodule "sites/all/modules/luggage/luggage_events"]
 	path = sites/all/modules/luggage/luggage_events
 	url = git@bitbucket.org:isuitc/luggage_events.git
+[submodule "sites/all/modules/luggage/luggage_resources"]
+	path = sites/all/modules/luggage/luggage_resources
+	url = git@bitbucket.org:isuitc/luggage_resources.git
+	branch = master
