@@ -1,16 +1,34 @@
 diff --git a/includes/entity.inc b/includes/entity.inc
-index 25f7584..384e51e 100644
+index 25f7584..dc43e73 100644
 --- a/includes/entity.inc
 +++ b/includes/entity.inc
-@@ -361,7 +361,7 @@ class DrupalDefaultEntityController implements DrupalEntityControllerInterface {
+@@ -360,9 +360,23 @@ class DrupalDefaultEntityController implements DrupalEntityControllerInterface {
+     // This ensures the same behavior whether loading from memory or database.
      if ($conditions) {
        foreach ($entities as $entity) {
-         $entity_values = (array) $entity;
+-        $entity_values = (array) $entity;
 -        if (array_diff_assoc($conditions, $entity_values)) {
-+        if (drupal_array_diff_assoc_recursive($conditions, $entity_values)) {
-           unset($entities[$entity->{$this->idKey}]);
+-          unset($entities[$entity->{$this->idKey}]);
++        // Iterate over all conditions and compare them to the entity
++        // properties. We cannot use array_diff_assoc() here since the
++        // conditions can be nested arrays, too.
++        foreach ($conditions as $property_name => $condition) {
++          if (is_array($condition)) {
++            // Multiple condition values for one property are treated as OR
++            // operation: only if the value is not at all in the condition array
++            // we remove the entity.
++            if (!in_array($entity->{$property_name}, $condition)) {
++              unset($entities[$entity->{$this->idKey}]);
++              continue 2;
++            }
++          }
++          elseif ($condition != $entity->{$property_name}) {
++            unset($entities[$entity->{$this->idKey}]);
++            continue 2;
++          }
          }
        }
+     }
 diff --git a/modules/simpletest/simpletest.info b/modules/simpletest/simpletest.info
 index 5583c2f..7b139ba 100644
 --- a/modules/simpletest/simpletest.info
@@ -25,10 +43,10 @@ index 5583c2f..7b139ba 100644
  files[] = tests/error.test
 diff --git a/modules/simpletest/tests/entity_crud.test b/modules/simpletest/tests/entity_crud.test
 new file mode 100644
-index 0000000..04d2fad
+index 0000000..be15977
 --- /dev/null
 +++ b/modules/simpletest/tests/entity_crud.test
-@@ -0,0 +1,45 @@
+@@ -0,0 +1,49 @@
 +<?php
 +
 +/**
@@ -61,9 +79,11 @@ index 0000000..04d2fad
 +    $node_2 = $this->drupalCreateNode(array('title' => 'Node 2'));
 +    $node_3 = $this->drupalCreateNode(array('title' => 'Node 3'));
 +
++    // Load all entities so that they are statically cached.
++    $all_nodes = entity_load('node', FALSE);
++
 +    // Check that the first node can be loaded by title.
 +    $nodes_loaded = entity_load('node', FALSE, array('title' => 'Array'));
-+    ksort($nodes_loaded);
 +    $this->assertEqual(array_keys($nodes_loaded), array($node_1->nid));
 +
 +    // Check that the second and third nodes can be loaded by title using an
@@ -72,6 +92,8 @@ index 0000000..04d2fad
 +    $nodes_loaded = entity_load('node', FALSE, array('title' => array('Node 2', 'Node 3')));
 +    ksort($nodes_loaded);
 +    $this->assertEqual(array_keys($nodes_loaded), array($node_2->nid, $node_3->nid));
++    $this->assertIdentical($nodes_loaded[$node_2->nid], $all_nodes[$node_2->nid], 'Loaded node 2 is identical to cached node.');
++    $this->assertIdentical($nodes_loaded[$node_3->nid], $all_nodes[$node_3->nid], 'Loaded node 3 is identical to cached node.');
 +  }
 +}
 diff --git a/modules/taxonomy/taxonomy.test b/modules/taxonomy/taxonomy.test

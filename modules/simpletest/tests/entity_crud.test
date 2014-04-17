@@ -30,9 +30,11 @@ class EntityLoadTestCase extends DrupalWebTestCase {
         $node_2 = $this->drupalCreateNode(array('title' => 'Node 2'));
         $node_3 = $this->drupalCreateNode(array('title' => 'Node 3'));
 
+        // Load all entities so that they are statically cached.
+        $all_nodes = entity_load('node', FALSE);
+
         // Check that the first node can be loaded by title.
         $nodes_loaded = entity_load('node', FALSE, array('title' => 'Array'));
-        ksort($nodes_loaded);
         $this->assertEqual(array_keys($nodes_loaded), array($node_1->nid));
 
         // Check that the second and third nodes can be loaded by title using an
@@ -41,5 +43,7 @@ class EntityLoadTestCase extends DrupalWebTestCase {
         $nodes_loaded = entity_load('node', FALSE, array('title' => array('Node 2', 'Node 3')));
         ksort($nodes_loaded);
         $this->assertEqual(array_keys($nodes_loaded), array($node_2->nid, $node_3->nid));
+        $this->assertIdentical($nodes_loaded[$node_2->nid], $all_nodes[$node_2->nid], 'Loaded node 2 is identical to cached node.');
+        $this->assertIdentical($nodes_loaded[$node_3->nid], $all_nodes[$node_3->nid], 'Loaded node 3 is identical to cached node.');
       }
 }
