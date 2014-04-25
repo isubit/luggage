@@ -1,6 +1,7 @@
 <?php
 
 require_once dirname(__FILE__) . '/multifield.field.inc';
+require_once dirname(__FILE__) . '/multifield.features.inc';
 
 /**
  * Implements hook_permission().
