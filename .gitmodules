@@ -19,6 +19,9 @@
 [submodule "sites/all/modules/luggage/luggage_contrib"]
 	path = sites/all/modules/luggage/luggage_contrib
 	url = git@bitbucket.org:isuitc/luggage_contrib.git
+[submodule "sites/all/modules/luggage/luggage_ct"]
+        path = sites/all/modules/luggage/luggage_ct
+        url = git@bitbucket.org:isuitc/luggage_ct.git
 [submodule "sites/all/modules/luggage/luggage_events"]
 	path = sites/all/modules/luggage/luggage_events
 	url = git@bitbucket.org:isuitc/luggage_events.git
@@ -49,6 +52,3 @@
 [submodule "sites/all/modules/luggage/luggage_vars"]
 	path = sites/all/modules/luggage/luggage_vars
 	url = git@bitbucket.org:isuitc/luggage_vars.git
-[submodule "sites/all/modules/luggage/luggage_ct"]
-	path = sites/all/modules/luggage/luggage_ct
-	url = git@bitbucket.org:isuitc/luggage_ct.git
