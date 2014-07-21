@@ -2722,7 +2722,7 @@ function form_select_options($element, $choices = NULL) {
   $options = '';
   foreach ($choices as $key => $choice) {
     if (is_array($choice)) {
-      $options .= '<optgroup label="' . check_plain($key) . '">';
+      $options .= '<optgroup label="' . $key . '">';
       $options .= form_select_options($element, $choice);
       $options .= '</optgroup>';
     }
