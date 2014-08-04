@@ -1,0 +1,64 @@
+language: php
+# a line added to relaunch travis
+ 
+# list any PHP version you want to test against
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+  
+matrix:
+  allow-failures
+    - php: 5.5
+    
+  env:
+   global:
+     - DATABASE='luggage'
+     - DB_USERNAME='root'
+     - DB_ENCODE='utf8'
+   matrix:
+     - DRUPAL_3RD_PARTY='composer_manager'
+     - DRUPAL_3RD_PARTY='libraries'
+
+mysql:
+  database: $DATABASE
+  username: $DB_USERNAME
+  encoding: $DB_ENCODE
+  
+before_install:
+  - composer self-update
+  - pear channel-discover pear.drush.org
+  
+install:
+  - pear install drush/drush-5.10.0.0
+  - phpenv rehash
+
+before_script:
+  - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+
+# install php packages required for running a web server from drush on php 5.3
+  - sudo apt-get update > /dev/null
+  - sudo apt-get install -y --force-yes php5-cgi php5-mysql
+
+# create new site, stubbing sendmail path with true to prevent delivery errors and manually resolving drush path
+  - mysql -e 'create database luggage'
+#  - php -d sendmail_path=`which true`
+  - drush si testing -y --db-url=mysql://travis@localhost/luggage --site-name=luggage --account-name=root install_configure_form.update_status_module='array(FALSE,FALSE)'
+  - drush --yes dl $DRUPAL_3RD_PARTY
+  - drush --yes en $DRUPAL_3RD_PARTY
+  - drush dl -y simpletest
+  - drush en -y simpletest
+# Install Omega and Suitcase
+  - drush @luggage.local en -y suitcase
+  - drush @luggage.local vset theme_default suitcase
+
+#Install all the Luggage features.
+  - drush -v en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_people luggage_people_isu luggage_people_solr luggage_piwik luggage_projects luggage_pubcookie luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars suitcase_config suitcase_ckeditor_overrides suitcase_devel suitcase_frontpanel
+  - drush fra -y
+  - drush cc all --yes
+
+script:
+  - drush test-run 'luggage' --debug --uri=http://127.0.0.1
+  
+notifications:
+ irc: "irc.freenode.org#isubit"
