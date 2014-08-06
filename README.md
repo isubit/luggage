@@ -66,6 +66,10 @@ drush cc all
 drush @self uli
 ```
 
+Troubleshooting
+----
+Join us on IRC @ #isubit
+
 License
 ----
 
