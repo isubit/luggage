@@ -68,7 +68,7 @@ drush @self uli
 
 Troubleshooting
 ----
-Join us on IRC #luggage
+Join us on IRC @ #luggage
 
 License
 ----
