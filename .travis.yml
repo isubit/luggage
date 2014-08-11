@@ -25,17 +25,17 @@ env:
 # Handle git submodules manually
 git:
   submodules: false
+
+# mysql:
+#  database: $DATABASE
+#  username: $DB_USERNAME
+#  encoding: $DB_ENCODE
   
-#Use sed to replace the SSH URL with the public URL, then initialize submodules before_install:
+before_install:
+  #Use sed to replace the SSH URL with the public URL, then initialize submodules before_install:
   - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --recursive
 
-mysql:
-  database: $DATABASE
-  username: $DB_USERNAME
-  encoding: $DB_ENCODE
-  
-before_install:
   - composer self-update
   - pear channel-discover pear.drush.org
   
@@ -51,7 +51,7 @@ before_script:
   - sudo apt-get install -y --force-yes php5-cgi php5-mysql
 
 # create new site, stubbing sendmail path with true to prevent delivery errors and manually resolving drush path
-  - mysql -e 'create database luggage'
+  - mysql -e 'create database luggage;'
 #  - php -d sendmail_path=`which true`
   - drush si testing -y --db-url=mysql://travis@localhost/luggage --site-name=luggage --account-name=root install_configure_form.update_status_module='array(FALSE,FALSE)'
   - drush --yes dl $DRUPAL_3RD_PARTY
