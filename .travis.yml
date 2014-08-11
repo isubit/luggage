@@ -13,7 +13,7 @@ matrix:
     - php: 5.5
     - php: hhvm
     
-env:
+ env:
   global:
     - DATABASE='luggage'
     - DB_USERNAME='root'
