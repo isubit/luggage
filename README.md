@@ -1,6 +1,6 @@
 Luggage
 =========
-
+[Travis][]
 Luggage is a Drupal 7.x platform for building/maintaining academic websites.
 
   - Add/Merge Luggage to your current Drupal 7.x project.
@@ -86,3 +86,4 @@ License
 [Piwik]:http://piwik.org/
 [Pubcookie]:http://www.pubcookie.org/
 [GPLv2]:http://www.gnu.org/licenses/gpl-2.0.html
+[Travis]:https://travis-ci.org/isubit/luggage.svg?branch=master
