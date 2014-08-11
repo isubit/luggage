@@ -59,8 +59,8 @@ before_script:
 #  - drush --yes dl simpletest
   - drush --yes en simpletest
 # Install Omega and Suitcase
-  - drush @luggage.local en -y suitcase
-  - drush @luggage.local vset theme_default suitcase
+  - drush en -y suitcase
+  - drush vset theme_default suitcase
 
 #Install all the Luggage features.
   - drush -v en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_people luggage_people_isu luggage_people_solr luggage_piwik luggage_projects luggage_pubcookie luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars suitcase_config suitcase_ckeditor_overrides suitcase_devel suitcase_frontpanel
