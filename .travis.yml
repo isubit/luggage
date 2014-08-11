@@ -18,9 +18,9 @@ matrix:
       - DATABASE='luggage'
       - DB_USERNAME='root'
       - DB_ENCODE='utf8'
-    matrix:
-      - DRUPAL_3RD_PARTY='composer_manager'
-      - DRUPAL_3RD_PARTY='libraries'
+#    matrix:
+#      - DRUPAL_3RD_PARTY='composer_manager'
+#      - DRUPAL_3RD_PARTY='libraries'
      
 # Handle git submodules manually
 git:
@@ -54,8 +54,8 @@ before_script:
   - mysql -e 'create database luggage;'
 #  - php -d sendmail_path=`which true`
   - drush si testing -y --db-url=mysql://travis@localhost/luggage --site-name=luggage --account-name=root install_configure_form.update_status_module='array(FALSE,FALSE)'
-  - drush --yes dl $DRUPAL_3RD_PARTY
-  - drush --yes en $DRUPAL_3RD_PARTY
+  - drush --yes dl composer_manager libraries
+  - drush --yes en composer_manager libraries
 #  - drush --yes dl simpletest
   - drush --yes en simpletest
 # Install Omega and Suitcase
@@ -71,4 +71,4 @@ script:
   - drush test-run 'luggage' --debug --uri=http://127.0.0.1
   
 notifications:
- irc: "irc.freenode.org#isubit"
+ irc: "irc.freenode.org#luggage"
