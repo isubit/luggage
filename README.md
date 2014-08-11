@@ -68,7 +68,9 @@ drush @self uli
 
 Troubleshooting
 ----
-Join us on IRC @ #isubit
+
+Join us on IRC on FreeNode in the channel "luggage"
+
 
 License
 ----
