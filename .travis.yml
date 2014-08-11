@@ -13,14 +13,14 @@ matrix:
     - php: 5.5
     - php: hhvm
     
- env:
-  global:
-    - DATABASE='luggage'
-    - DB_USERNAME='root'
-    - DB_ENCODE='utf8'
-  matrix:
-    - DRUPAL_3RD_PARTY='composer_manager'
-    - DRUPAL_3RD_PARTY='libraries'
+  env:
+    global:
+      - DATABASE='luggage'
+      - DB_USERNAME='root'
+      - DB_ENCODE='utf8'
+    matrix:
+      - DRUPAL_3RD_PARTY='composer_manager'
+      - DRUPAL_3RD_PARTY='libraries'
      
 # Handle git submodules manually
 git:
