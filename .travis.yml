@@ -53,4 +53,4 @@ script:
   - drush test-run 'luggage' --debug --uri=http://127.0.0.1:8080
   
 notifications:
- irc: "irc.freenode.org#luggage"
+ irc: "irc.freenode.org##luggage"
