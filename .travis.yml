@@ -56,7 +56,7 @@ before_script:
   - drush si testing -y --db-url=mysql://travis@localhost/luggage --site-name=luggage --account-name=root install_configure_form.update_status_module='array(FALSE,FALSE)'
   - drush --yes dl $DRUPAL_3RD_PARTY
   - drush --yes en $DRUPAL_3RD_PARTY
-  - drush --yes dl simpletest
+#  - drush --yes dl simpletest
   - drush --yes en simpletest
 # Install Omega and Suitcase
   - drush @luggage.local en -y suitcase
