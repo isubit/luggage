@@ -1,6 +1,7 @@
 Luggage
 =========
-[Travis][]
+![Travis](https://travis-ci.org/isubit/luggage.svg?branch=master "Build Status")
+
 Luggage is a Drupal 7.x platform for building/maintaining academic websites.
 
   - Add/Merge Luggage to your current Drupal 7.x project.
