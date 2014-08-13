@@ -1,5 +1,6 @@
 Luggage
 =========
+![Travis](https://travis-ci.org/isubit/luggage_isu.svg?branch=master "Build Status")
 
 Luggage is a Drupal 7.x platform for building/maintaining academic websites.
 
@@ -69,7 +70,7 @@ drush @self uli
 Troubleshooting
 ----
 
-Join us on IRC on FreeNode in the channel "luggage"
+Join us on IRC @ ##luggage
 
 
 License
@@ -88,3 +89,4 @@ License
 [Piwik]:http://piwik.org/
 [Pubcookie]:http://www.pubcookie.org/
 [GPLv2]:http://www.gnu.org/licenses/gpl-2.0.html
+[Travis]:https://travis-ci.org/isubit/luggage.svg?branch=master
