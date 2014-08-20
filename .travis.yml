@@ -15,7 +15,8 @@ git:
   submodules: false
   
 before_script:
-  #Use sed to replace the SSH URL with the public URL, then initialize submodules before_install:
+  # Use sed to replace the SSH URL with the public URL, then initialize
+  # submodules before_install:
   - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --recursive
   
@@ -26,11 +27,11 @@ before_script:
   # stubbing sendmail path with true to prevent delivery errors
   - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
 
-# install php packages required for running a web server from drush on php 5.3
+# Install php packages required for running a web server from drush on php 5.3
   - sudo apt-get update > /dev/null
   - sudo apt-get install -y --force-yes php5-cgi php5-mysql
 
-# create new site and manually resolving drush path
+# Create new site
   - mysql -e 'create database luggage;'
   
 #  - php -d sendmail_path=`which true`
@@ -41,7 +42,7 @@ before_script:
   - drush en -y suitcase
   - drush vset theme_default suitcase
 
-#Install all the Luggage features.
+# Install all the Luggage features.
   - drush -v en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_people luggage_people_solr luggage_placeholder luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars suitcase_config suitcase_frontpanel
   - drush fra -y
   - drush cc all --yes
