@@ -1,6 +1,6 @@
 Luggage
 =========
-![Travis](https://travis-ci.org/isubit/luggage_isu.svg?branch=master "Build Status")
+[![Build Status](https://travis-ci.org/isubit/luggage_isu.svg?branch=master "Build Status")](http://travis-ci.org/isubit/luggage_isu)
 
 Luggage is a Drupal 7.x platform for building/maintaining academic websites.
 
