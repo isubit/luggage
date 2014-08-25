@@ -44,7 +44,7 @@ Assumptions:
 
 ```
 # Connect your git repo to the luggage git repo
-git remote add luggage git@bitbucket.org:isuitc/luggage.git
+git remote add luggage git@github.com:isubit/luggage.git
 # Bring the luggage code in
 git pull luggage master
 # Initialize and retrieve submodules from their own git repos
