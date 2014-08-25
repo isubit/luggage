@@ -11,11 +11,14 @@
 
 # FORK=$1
 
-ALIAS='@self'
+ALIAS="@self"
 
 # Some Variables
 DIRECTORY=`drush site-alias $ALIAS --component=root`
 OS=`uname`
+if [ -n "${DBCREDS-1}" ]; then
+  DBCREDS="root"
+fi
 
 # If target directory already exists, move it to $DIRECTORY.bak
 # if [ -d "$DIRECTORY" ]; then
