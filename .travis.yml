@@ -31,26 +31,27 @@ before_script:
   - sudo apt-get update > /dev/null
   - sudo apt-get install -y --force-yes php5-cgi php5-mysql
 
-# Create new site
-  - mysql -e 'create database luggage;'
+# # Create new site
+#   - mysql -e 'create database luggage;'
   
-#  - php -d sendmail_path=`which true`
-  - drush si testing -y --db-url=mysql://travis@localhost/luggage --site-name=luggage --account-name=root install_configure_form.update_status_module='array(FALSE,FALSE)'
-  - drush --yes en simpletest
+# #  - php -d sendmail_path=`which true`
+#   - drush si testing -y --db-url=mysql://travis@localhost/luggage --site-name=luggage --account-name=root install_configure_form.update_status_module='array(FALSE,FALSE)'
+#   - drush --yes en simpletest
   
-# Install Omega and Suitcase
-  - drush en -y suitcase
-  - drush vset theme_default suitcase
+# # Install Omega and Suitcase
+#   - drush en -y suitcase
+#   - drush vset theme_default suitcase
 
-# Install all the Luggage features.
-  - drush -v en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_people luggage_people_solr luggage_placeholder luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars suitcase_config suitcase_frontpanel
-  - drush fra -y
-  - drush cc all --yes
-  - drush runserver --server=builtin 8080 &
-  - sleep 4
-  - drush vset --yes simpletest_verbose FALSE
+# # Install all the Luggage features.
+#   - drush -v en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_people luggage_people_solr luggage_placeholder luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars suitcase_config suitcase_frontpanel
+#   - drush fra -y
+#   - drush cc all --yes
+#   - drush runserver --server=builtin 8080 &
+#   - sleep 4
+#   - drush vset --yes simpletest_verbose FALSE
 
 script:
+  - bash scripts/build_luggage.sh
   - drush test-run 'luggage' --debug --uri=http://127.0.0.1:8080
   
 notifications:
