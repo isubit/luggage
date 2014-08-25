@@ -55,9 +55,10 @@ script:
   - drush test-run 'luggage' --debug --uri=http://127.0.0.1:8080
   
 notifications:
- irc: 
-   channels:
-     - "irc.freenode.org##luggage"
-   on_success: never
-   on_failure: always
+  email: false
+  irc: 
+    channels:
+      - "irc.freenode.org##luggage"
+    on_success: never
+    on_failure: always
  
