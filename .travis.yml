@@ -13,6 +13,8 @@ matrix:
 # Handle git submodules manually
 git:
   submodules: false
+
+env: DBCREDS=root
   
 before_script:
   # Use sed to replace the SSH URL with the public URL, then initialize
