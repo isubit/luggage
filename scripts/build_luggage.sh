@@ -47,12 +47,6 @@ if (file_exists(\$environment_settings)) {
 require(\$environment_settings);
 }" | sudo tee -a $DIRECTORY/sites/default/settings.php
 
-# Ensure presence of development modules and absence of piwik
-if [[ "$ISU_ENVIRONMENT" == 'DEVELOPMENT' || "$ISU_ENVIRONMENT" == 'TESTING' ]]; then
-  drush $ALIAS dl security_review devel hacked devel_themer simplehtmldom-7.x-1.12 get_form_id
-  drush $ALIAS en -y security_review hacked
-fi
-
 # Commit all the additions and switch to development branch.
 echo "Your luggage is ready."
 echo ""
