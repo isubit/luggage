@@ -52,7 +52,7 @@ before_script:
 
 script:
   - bash scripts/build_luggage.sh
-  - drush test-run 'luggage' --debug --uri=http://127.0.0.1:8080
+  # - drush test-run 'luggage' --debug --uri=http://127.0.0.1:8080
   
 notifications:
   email: false
