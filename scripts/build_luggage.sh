@@ -12,8 +12,10 @@ ALIAS="@self"
 # Some Variables
 DIRECTORY=`drush site-alias $ALIAS --component=root`
 OS=`uname`
-if [ -n "${DBCREDS-1}" ]; then
-  DBCREDS="root"
+if [ "$DBCREDS"=="" ]; then
+  DBCREDENTIALS="root"
+else
+  DBCREDENTIALS=DBCREDS
 fi
 
 # Get submodules defined in .gitmodules
@@ -21,7 +23,7 @@ git submodule update --init
 
 # Install luggage, all its features and all its dependencies - This should be factored out as a separate function
 # Install Drupal 7 using the minimal profile.
-drush $ALIAS si minimal -y --db-url=mysql://$DBCREDS@localhost/luggage --site-name=luggage --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
+drush $ALIAS si minimal -y --db-url=mysql://$DBCREDENTIALS@localhost/luggage --site-name=luggage --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
 
 ##Install all the Luggage features.
 drush -v $ALIAS en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_placeholder luggage_people luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
