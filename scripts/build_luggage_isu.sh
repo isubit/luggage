@@ -12,7 +12,7 @@ ALIAS="@self"
 # Some Variables
 DIRECTORY=`drush site-alias $ALIAS --component=root`
 OS=`uname`
-if [ ! -z "$DBCREDS" ]; then
+if [ -z "$DBCREDS" ]; then
     printf "DB username: "
     read username
     stty -echo
