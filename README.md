@@ -1,4 +1,4 @@
-Luggage
+Luggage_ISU
 =========
 [![Build Status](https://travis-ci.org/isubit/luggage_isu.svg?branch=master "Build Status")](http://travis-ci.org/isubit/luggage_isu)
 
