@@ -12,10 +12,16 @@ ALIAS="@self"
 # Some Variables
 DIRECTORY=`drush site-alias $ALIAS --component=root`
 OS=`uname`
-if [ "$DBCREDS"=="" ]; then
-  DBCREDENTIALS="root"
+if [ -z "$DBCREDS" ]; then
+    printf "DB username: "
+    read username
+    stty -echo
+    printf "DB password: "
+    read password
+    stty echo
+    DBCREDENTIALS=$username:$password
 else
-  DBCREDENTIALS=DBCREDS
+    DBCREDENTIALS=$DBCREDS
 fi
 
 # Get submodules defined in .gitmodules
