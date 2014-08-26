@@ -39,7 +39,7 @@ drush $ALIAS vset theme_default suitcase
 drush -v $ALIAS en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_placeholder luggage_people luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
 
 # Install suitcase features
-drush -v $ALIAS en -y luggage_pubcookie luggage_piwik luggage_people_isu suitcase_config suitcase_devel suitcase_frontpanel
+drush -v $ALIAS en -y luggage_pubcookie luggage_piwik luggage_people_isu suitcase_config
 
 # Revert all the Luggage features.
 drush $ALIAS fra -y
