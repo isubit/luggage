@@ -15,6 +15,12 @@ Luggage is a managed stable release of Drupal 7.x coupled with several features 
 > Luggage is not an install profile nor a distribution. It can be applied to any Drupal 7 project at any time.
 > It can also be removed as simply.
 
+Is Luggage Right For You?
+-------------------------
+An Iowa State University flavor of Luggage, [Luggage ISU](https://github.com/isubit/luggage_isu) is available for those intending to build and deploy at ISU.
+
+If this is not you, then Luggage is right for you!
+
 Version
 ----
 
