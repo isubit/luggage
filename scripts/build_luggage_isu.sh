@@ -5,7 +5,7 @@
 # - Drush 5.9 or greater
 # - Git 1.8.5.2 or greater
 # - Execution from a shell in the webroot directory.
-# bash <(curl -s https://gist.github.com/hofmockel/8272036/raw/80dcb7040ba7f99c4decefd72a7680c3cac457d8/new-luggage.sh)
+# bash <(curl -s https://raw.githubusercontent.com/isubit/luggage_isu/master/scripts/build_luggage_isu.sh)
 
 ALIAS="@self"
 
