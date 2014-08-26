@@ -5,7 +5,7 @@
 # - Drush 5.9 or greater
 # - Git 1.8.5.2 or greater
 # - Execution from a shell in the webroot directory.
-# bash <(curl -s https://gist.github.com/hofmockel/8272036/raw/80dcb7040ba7f99c4decefd72a7680c3cac457d8/new-luggage.sh)
+# bash <(curl -s https://raw.githubusercontent.com/isubit/luggage_isu/master/scripts/build_luggage_isu.sh)
 
 ALIAS="@self"
 
@@ -39,7 +39,7 @@ drush $ALIAS vset theme_default suitcase
 drush -v $ALIAS en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_placeholder luggage_people luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
 
 # Install suitcase features
-drush -v $ALIAS en -y luggage_pubcookie luggage_piwik luggage_people_isu suitcase_config suitcase_devel suitcase_frontpanel
+drush -v $ALIAS en -y luggage_pubcookie luggage_piwik luggage_people_isu suitcase_config
 
 # Revert all the Luggage features.
 drush $ALIAS fra -y
