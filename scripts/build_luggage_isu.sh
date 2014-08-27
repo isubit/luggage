@@ -18,8 +18,8 @@ ALIAS="@self"
 DRUPALROOT=$(drush site-alias $ALIAS --component=root)
 DIRECTORY=$(pwd)
 
-if [ "$DIRECTORY" != "$DRUPALROOT" ]
-  echo "Please run $0 from the root of a Drupal site." && exit 1;
+if [ "$DIRECTORY" != "$DRUPALROOT" ]; then
+  echo "Please run $0 from the root of a Drupal site." && exit 1
 fi
 
 if [ -z "$DBCREDS" ]; then
