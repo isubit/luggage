@@ -39,7 +39,7 @@ git submodule update --init
 
 # Install luggage, all its features and all its dependencies.
 # Install Drupal 7 using the minimal profile.
-drush $ALIAS si minimal -y --db-url=mysql://$DBCREDS@localhost/luggage --site-name=luggage --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
+drush $ALIAS si minimal -y --db-url=mysql://$DBCREDS@localhost/luggage_isu --site-name=luggage_isu --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
 
 # Install Theme - Suitcase
 drush $ALIAS en -y suitcase
