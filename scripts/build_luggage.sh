@@ -5,13 +5,22 @@
 # - Drush 5.9 or greater
 # - Git 1.8.5.2 or greater
 # - Execution from a shell in the webroot directory.
-# bash <(curl -s https://gist.github.com/hofmockel/8272036/raw/80dcb7040ba7f99c4decefd72a7680c3cac457d8/new-luggage.sh)
+#
+# git clone git@github.com:isubit/luggage_isu.git
+# cd luggage_isu
+# ./scripts/build_luggage_isu.sh
+# 
 
 ALIAS="@self"
 
-# Some Variables
-DIRECTORY=`drush site-alias $ALIAS --component=root`
-OS=`uname`
+# Ensure we are at the root of a Drupal site.
+DRUPALROOT=$(drush site-alias $ALIAS --component=root)
+DIRECTORY=$(pwd)
+
+if [ "$DIRECTORY" != "$DRUPALROOT" ]; then
+  echo "Please run $0 from the root of a Drupal site." && exit 1
+fi
+
 if [ -z "$DBCREDS" ]; then
     printf "DB username: "
     read username
@@ -54,6 +63,11 @@ echo "
 if (file_exists(\$environment_settings)) {
 require(\$environment_settings);
 }" | sudo tee -a $DIRECTORY/sites/default/settings.php
+
+# Check for existence of /var/www/env/settings.env.inc
+if [ ! -e /var/www/env/settings.env.inc ]; then
+  echo "Warning: /var/www/env/settings.env.inc does not exist"
+fi
 
 # Commit all the additions and switch to development branch.
 echo "Your luggage is ready."
