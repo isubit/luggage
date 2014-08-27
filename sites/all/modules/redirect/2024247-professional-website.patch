@@ -1,0 +1,31 @@
+From eecb0c4a76f7094cef3365babd064bbfb32b3ec7 Mon Sep 17 00:00:00 2001
+From: John VanDyk <jvandyk@2375.no-reply.drupal.org>
+Date: Tue, 21 Jan 2014 14:35:50 -0600
+Subject: [PATCH] Hush up message about infinite redirects because those
+ messages are not beneficial to the user
+
+---
+ sites/all/modules/redirect/redirect.module | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/sites/all/modules/redirect/redirect.module b/sites/all/modules/redirect/redirect.module
+index c3c6329..9b0a71c 100644
+--- a/sites/all/modules/redirect/redirect.module
++++ b/sites/all/modules/redirect/redirect.module
+@@ -987,9 +987,13 @@ function redirect_redirect($redirect = NULL) {
+   }
+   else {
+     // For now don't trigger an error if being run inside SimpleTest.
++    // Patch by -JV
++    // No reason to tell user about a prevented infinite redirect.
++    /*
+     if (empty($GLOBALS['drupal_test_info']['test_run_id'])) {
+       trigger_error(t('Infinite redirect loop prevented.'), E_USER_WARNING);
+     }
++    */
+     return FALSE;
+   }
+ 
+-- 
+1.8.3.4 (Apple Git-47)
+
