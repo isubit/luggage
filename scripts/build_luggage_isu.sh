@@ -4,14 +4,24 @@
 # ===========
 # - Drush 5.9 or greater
 # - Git 1.8.5.2 or greater
-# - Execution from a shell in the webroot directory.
-# bash <(curl -s https://raw.githubusercontent.com/isubit/luggage_isu/master/scripts/build_luggage_isu.sh)
+# - Execution from a shell in the webroot directory of a recently cloned
+#   luggage_isu. Example:
+#
+# git clone git@github.com:isubit/luggage_isu.git
+# cd luggage_isu
+# ./scripts/build_luggage_isu.sh
+# 
 
 ALIAS="@self"
 
-# Some Variables
-DIRECTORY=`drush site-alias $ALIAS --component=root`
-OS=`uname`
+# Ensure we are at the root of a Drupal site.
+DRUPALROOT=$(drush site-alias $ALIAS --component=root)
+DIRECTORY=$(pwd)
+
+if [ "$DIRECTORY" != "$DRUPALROOT" ]
+  echo "Please run $0 from the root of a Drupal site." && exit 1;
+fi
+
 if [ -z "$DBCREDS" ]; then
     printf "DB username: "
     read username
@@ -19,17 +29,17 @@ if [ -z "$DBCREDS" ]; then
     printf "DB password: "
     read password
     stty echo
-    DBCREDENTIALS=$username:$password
+    DBCREDS=$username:$password
 else
-    DBCREDENTIALS=$DBCREDS
+    DBCREDS=$DBCREDS
 fi
 
 # Get submodules defined in .gitmodules
 git submodule update --init
 
-# Install luggage, all its features and all its dependencies - This should be factored out as a separate function
+# Install luggage, all its features and all its dependencies.
 # Install Drupal 7 using the minimal profile.
-drush $ALIAS si minimal -y --db-url=mysql://$DBCREDENTIALS@localhost/luggage --site-name=luggage --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
+drush $ALIAS si minimal -y --db-url=mysql://$DBCREDS@localhost/luggage --site-name=luggage --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
 
 # Install Theme - Suitcase
 drush $ALIAS en -y suitcase
@@ -61,6 +71,11 @@ echo "
 if (file_exists(\$environment_settings)) {
 require(\$environment_settings);
 }" | sudo tee -a $DIRECTORY/sites/default/settings.php
+
+# Check for existence of /var/www/env/settings.env.inc
+if [ ! -e /var/www/env/settings.env.inc ]; then
+  echo "Warning: /var/www/env/settings.env.inc does not exist"
+fi
 
 # Commit all the additions and switch to development branch.
 echo "Your luggage is ready."
