@@ -15,6 +15,12 @@ Luggage is a managed stable release of Drupal 7.x coupled with several features 
 > Luggage is not an install profile nor a distribution. It can be applied to any Drupal 7 project at any time.
 > It can also be removed as simply.
 
+Is Luggage Right For You?
+-------------------------
+An Iowa State University flavor of Luggage, [Luggage ISU](https://github.com/isubit/luggage_isu) is available for those intending to build and deploy at ISU.
+
+If this is not you, then Luggage is right for you!
+
 Version
 ----
 
@@ -36,36 +42,25 @@ Luggage uses a number of open source projects to work properly:
 Installation
 --------------
 
-The instructions below build a complete luggage with all the features, supporting modules and the suitcase theme.
+Below is the brief run-down on how to install Luggage. The full installation documentation can be found [here](http://www.biology-it.iastate.edu/luggage_doc/installing-luggage-scratch#).
 
-Assumptions:
-* Drush is installed.
-* You are located at the root of an existing Git repository.
+#####Assumptions:
+* Drush is installed
+* Git is installed
 
+Clone this repo into the root directory that your web server points to.
+
+Run the build script found within the *scripts* directory:
 ```
-# Connect your git repo to the luggage git repo
-git remote add luggage git@github.com:isubit/luggage.git
-# Bring the luggage code in
-git pull luggage master
-# Initialize and retrieve submodules from their own git repos
-git submodule init
-git submodule update
-# The following three commands add your new pristine codebase to your repo --
-# the one you created before you added the git remote.
-git add -A
-git commit -m "picking up luggage"
-git push origin master
-# Set up a fresh Drupal. If you don't have $DBCREDS defined substitute your
-# database username and password in the following command, e.g., root:root
-drush si minimal -y --db-url=mysql://$DBCREDS@localhost/myproject --site-name=myproject --account-name=isuitc install_configure_form.update_status_module='array(FALSE,FALSE)'
-# Enable luggage Drupal modules
-drush en -y luggage_piwik luggage_pubcookie luggage_vars luggage_seo luggage_core luggage_contrib luggage_roles luggage_ckeditor luggage_ui luggage_solr luggage_news luggage_announcements luggage_people suitcase_config
-# Reset features to their original configuration settings
-drush fra -y
-# Clear caches and log in
-drush cc all
-drush @self uli
+source ./scripts/build_luggage.sh
 ```
+
+The last line of output from the script, if successful, will be a root user one-time login link. Copy and append everything from "/user" and on, to the end of the luggage installation url in a web browser of your choice. Typically, the final link will look something like this:
+``` 
+http://localhost/luggage/user/reset/1/1409061179/KjbHsr6O7FRaz-__WShbgWuPwKHKrXHy6QGV_AQu02E/login
+```
+
+You are now logged in as the root user, allowing you to develop using the power of Luggage! Enjoy!
 
 Troubleshooting
 ----
