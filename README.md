@@ -4,7 +4,7 @@ Luggage
 
 Luggage is a Drupal 7.x platform for building/maintaining academic websites.
 
-  - Add/Merge Luggage to your current Drupal 7.x project.
+  - Build Luggage from script or Add/Merge Luggage to your current Drupal 7.x project.
   - Enable the features you would like to use.
   - Magic.
 
@@ -17,14 +17,14 @@ Luggage is a managed stable release of Drupal 7.x coupled with several features 
 
 Is Luggage Right For You?
 -------------------------
-An Iowa State University flavor of Luggage, [Luggage ISU](https://github.com/isubit/luggage_isu) is available for those intending to build and deploy at ISU.
+An Iowa State University flavor of Luggage, [Luggage ISU][] is available for those intending to build and deploy at ISU.
 
 If this is not you, then Luggage is right for you!
 
 Version
 ----
 
-2.x.x
+Branch 2.x.x currently `development`
 
 Technology
 -----------
@@ -37,7 +37,6 @@ Luggage uses a number of open source projects to work properly:
 * [Flexslider2][] - The best responsive slider. Period.
 * [Apache Solr][] - search platform.
 * [Piwik][] - web analytics platform
-* [Pubcookie][] - intra-institutional web authentication
 
 Installation
 --------------
@@ -48,7 +47,9 @@ Below is the brief run-down on how to install Luggage. The full installation doc
 * Drush is installed
 * Git is installed
 
-Clone this repo into the root directory that your web server points to.
+Clone this repos latest release into the root directory that your web server points to.
+Releases: https://github.com/isubit/luggage/releases
+
 
 Run the build script found within the *scripts* directory:
 ```
@@ -64,7 +65,13 @@ You are now logged in as the root user, allowing you to develop using the power 
 
 Troubleshooting
 ----
-Join us on IRC @ #luggage
+Read/Search [Luggage Ducumentation][]
+
+Join us on IRC FreeNode @ #luggage
+* Need help setting up IRC? https://www.drupal.org/irc/setting-up
+
+Travis-CI - https://travis-ci.org/isubit/luggage
+* Reports into IRC FreeNode @  ##luggage
 
 License
 ----
@@ -83,4 +90,6 @@ License
 [Pubcookie]:http://www.pubcookie.org/
 [GPLv2]:http://www.gnu.org/licenses/gpl-2.0.html
 [Travis]:https://travis-ci.org/isubit/luggage.svg?branch=master
+[Luggage ISU]:https://github.com/isubit/luggage_isu
+[Luggage Ducumentation]:http://www.biology-it.iastate.edu/luggage_doc/
 
