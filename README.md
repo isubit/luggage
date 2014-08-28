@@ -63,6 +63,13 @@ http://localhost/luggage/user/reset/1/1409061179/KjbHsr6O7FRaz-__WShbgWuPwKHKrXH
 
 You are now logged in as the root user, allowing you to develop using the power of Luggage! Enjoy!
 
+Contributing
+----
+
+Refer to the [Luggage git architecture](http://www.biology-it.iastate.edu/luggage_doc/comprehensive-code-flow-management)
+
+Refer to the [contribution documentation](http://www.biology-it.iastate.edu/luggage_doc/luggage-development)
+
 Troubleshooting
 ----
 Read/Search [Luggage Ducumentation][]
