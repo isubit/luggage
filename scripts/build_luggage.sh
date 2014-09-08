@@ -21,7 +21,6 @@ DIRECTORY=$(pwd)
 # http://stackoverflow.com/questions/1371261/get-current-directory-name-without-full-path-in-bash-script?answertab=active#tab-top
 BASENAME=${PWD##*/}
 echo "Proceeding with site name -> " $BASENAME
-read
 
 if [ "$DIRECTORY" != "$DRUPALROOT" ]; then
   echo "Please run $0 from the root of a Drupal site." && exit 1
