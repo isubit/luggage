@@ -98,4 +98,16 @@ build_luggage() {
     finish
 }
 
-build_luggage
+# http://wiki.bash-hackers.org/howto/getopts_tutorial#an_option_with_argument
+while getopts ":b" opt; do
+    case $opt in
+        b)
+            echo "-b was triggered">&2
+            build_luggage
+            ;;
+        \?)
+            echo "Invalid Option: -$OPTARG" >&2
+            exit 1
+            ;;
+    esac
+done
