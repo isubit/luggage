@@ -9,74 +9,93 @@
 # git clone git@github.com:isubit/luggage_isu.git
 # cd luggage_isu
 # ./scripts/build_luggage_isu.sh
-# 
+#
 
 ALIAS="@self"
 
 # Ensure we are at the root of a Drupal site.
 DRUPALROOT=$(drush site-alias $ALIAS --component=root)
 DIRECTORY=$(pwd)
+
 # Get name of directory we are currently in
 # to use as the database name and such
 # http://stackoverflow.com/questions/1371261/get-current-directory-name-without-full-path-in-bash-script?answertab=active#tab-top
 BASENAME=${PWD##*/}
-echo "Proceeding with site name -> " $BASENAME
 
-if [ "$DIRECTORY" != "$DRUPALROOT" ]; then
-  echo "Please run $0 from the root of a Drupal site." && exit 1
-fi
+init() {
+    if [ "$DIRECTORY" != "$DRUPALROOT" ]; then
+        echo "Please run $0 from the root of a Drupal site." && exit 1
+    fi
 
-if [ -z "$DBCREDS" ]; then
-    printf "DB username: "
-    read username
-    stty -echo
-    printf "DB password: "
-    read password
-    stty echo
-    DBCREDENTIALS=$username:$password
-else
-    DBCREDENTIALS=$DBCREDS
-fi
+    echo "Proceeding with site name -> " $BASENAME
 
-# Get submodules defined in .gitmodules
-git submodule update --init
+    if [ -z "$DBCREDS" ]; then
+        printf "DB username: "
+        read username
+        stty -echo
+        printf "DB password: "
+        read password
+        stty echo
+        DBCREDENTIALS=$username:$password
+    else
+        DBCREDENTIALS=$DBCREDS
+    fi
 
-# Install luggage, all its features and all its dependencies - This should be factored out as a separate function
-# Install Drupal 7 using the minimal profile.
-drush $ALIAS si minimal -y --db-url=mysql://$DBCREDENTIALS@localhost/$BASENAME --site-name=$BASENAME --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
+    # Get submodules defined in .gitmodules
+    git submodule update --init
+}
 
-##Install all the Luggage features.
-drush -v $ALIAS en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_placeholder luggage_people luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
+install_site() {
+    # Install luggage, all its features and all its dependencies - This should be factored out as a separate function
+    # Install Drupal 7 using the minimal profile.
+    drush $ALIAS si minimal -y --db-url=mysql://$DBCREDENTIALS@localhost/$BASENAME --site-name=$BASENAME --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
+}
 
-# Revert all the Luggage features.
-drush $ALIAS fra -y
+install_luggage_features() {
+    ##Install all the Luggage features.
+    drush -v $ALIAS en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_placeholder luggage_people luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
+}
 
-# Clear all Drupal cache.
-drush $ALIAS cc all
-drush $ALIAS cron-run all --cli all > /dev/null 2>&1
+finish() {
+    # Revert all the Luggage features.
+    drush $ALIAS fra -y
 
-# new files directory
-mkdir -p $DIRECTORY/files
-sudo chown -R $APACHEUSER $DIRECTORY/files
-sudo chmod -R g+w $DIRECTORY/files
+    # Clear all Drupal cache.
+    drush $ALIAS cc all
+    drush $ALIAS cron-run all --cli all > /dev/null 2>&1
 
-# Add a conditional include for settings.env.inc
-echo "
-// Environment specific settings.
-\$environment_settings = '/var/www/env/settings.env.inc';
+    # new files directory
+    mkdir -p $DIRECTORY/files
+    sudo chown -R $APACHEUSER $DIRECTORY/files
+    sudo chmod -R g+w $DIRECTORY/files
 
-if (file_exists(\$environment_settings)) {
-require(\$environment_settings);
-}" | sudo tee -a $DIRECTORY/sites/default/settings.php
+    # Add a conditional include for settings.env.inc
+    echo "
+    // Environment specific settings.
+    \$environment_settings = '/var/www/env/settings.env.inc';
 
-# Check for existence of /var/www/env/settings.env.inc
-if [ ! -e /var/www/env/settings.env.inc ]; then
-  echo "Warning: /var/www/env/settings.env.inc does not exist"
-fi
+    if (file_exists(\$environment_settings)) {
+        require(\$environment_settings);
+    }" | sudo tee -a $DIRECTORY/sites/default/settings.php
 
-# Commit all the additions and switch to development branch.
-echo "Your luggage is ready."
-echo ""
+    # Check for existence of /var/www/env/settings.env.inc
+    if [ ! -e /var/www/env/settings.env.inc ]; then
+        echo "Warning: /var/www/env/settings.env.inc does not exist"
+    fi
 
-# Provide a one-time login URL
-drush $ALIAS uli
+    # Commit all the additions and switch to development branch.
+    echo "Your luggage is ready."
+    echo ""
+
+    # Provide a one-time login URL
+    drush $ALIAS uli
+}
+
+build_luggage() {
+    init
+    install_site
+    install_luggage_features
+    finish
+}
+
+build_luggage
