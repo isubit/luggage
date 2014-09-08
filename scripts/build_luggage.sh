@@ -16,6 +16,10 @@ ALIAS="@self"
 # Ensure we are at the root of a Drupal site.
 DRUPALROOT=$(drush site-alias $ALIAS --component=root)
 DIRECTORY=$(pwd)
+# Get name of directory we are currently in
+# to use as the database name and such
+# http://stackoverflow.com/questions/1371261/get-current-directory-name-without-full-path-in-bash-script?answertab=active#tab-top
+BASENAME=${PWD##*/}
 
 if [ "$DIRECTORY" != "$DRUPALROOT" ]; then
   echo "Please run $0 from the root of a Drupal site." && exit 1
@@ -38,7 +42,7 @@ git submodule update --init
 
 # Install luggage, all its features and all its dependencies - This should be factored out as a separate function
 # Install Drupal 7 using the minimal profile.
-drush $ALIAS si minimal -y --db-url=mysql://$DBCREDENTIALS@localhost/luggage --site-name=luggage --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
+drush $ALIAS si minimal -y --db-url=mysql://$DBCREDENTIALS@localhost/$BASENAME --site-name=$BASENAME --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
 
 ##Install all the Luggage features.
 drush -v $ALIAS en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_placeholder luggage_people luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
