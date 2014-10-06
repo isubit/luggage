@@ -1,9 +1,8 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: rlfrahm
- * Date: 10/6/14
- * Time: 12:35 PM
+ * @author Ryan Frahm
+ * @date 10/6/14
+ * @time 12:35 PM
  */
 
 class LuggageTestCase extends PHPUnit_Extensions_Selenium2TestCase {
@@ -16,8 +15,18 @@ class LuggageTestCase extends PHPUnit_Extensions_Selenium2TestCase {
    * Tests the title
    */
   public function testtitle() {
-    $title = 'luggage';
+    $title = 'Welcome to luggage | luggage';
     $this->url('http://local.dev/luggage');
     $this->assertEquals( $title, $this->title());
+  }
+
+  /**
+   * Tests that the categories button exists
+   */
+  public function testLogin() {
+    $path = 'luggage/categories';
+    $this->url('http://local.dev/luggage');
+    $element = $this->byXPath('//*[@id="main-menu-links"]/li/a')->click();
+    $this->assertStringEndsWith('luggage/categories', $this->url());
   }
 }
