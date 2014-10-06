@@ -5,7 +5,7 @@
  * @time 12:35 PM
  */
 
-class LuggageTestCase extends PHPUnit_Extensions_Selenium2TestCase {
+class LuggageTest extends PHPUnit_Extensions_Selenium2TestCase {
   protected function setUp() {
     $this->setBrowser('firefox');
     $this->setBrowserUrl('http://local.dev/luggage');
@@ -14,9 +14,9 @@ class LuggageTestCase extends PHPUnit_Extensions_Selenium2TestCase {
   /**
    * Tests the title
    */
-  public function testtitle() {
+  public function testTitle() {
     $title = 'Welcome to luggage | luggage';
-    $this->url('http://local.dev/luggage');
+    $this->url('/');
     $this->assertEquals( $title, $this->title());
   }
 
@@ -25,7 +25,7 @@ class LuggageTestCase extends PHPUnit_Extensions_Selenium2TestCase {
    */
   public function testLogin() {
     $path = 'luggage/categories';
-    $this->url('http://local.dev/luggage');
+    $this->url('/');
     $element = $this->byXPath('//*[@id="main-menu-links"]/li/a')->click();
     $this->assertStringEndsWith('luggage/categories', $this->url());
   }
