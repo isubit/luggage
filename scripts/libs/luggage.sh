@@ -42,7 +42,7 @@ init() {
     fi
 
     # Get submodules defined in .gitmodules
-    git submodule update --init
+    git submodule update --init --force
 }
 
 install_site() {
