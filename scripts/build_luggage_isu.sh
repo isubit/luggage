@@ -14,17 +14,16 @@
 
 # Inlcude luggage functions for building
 . $(dirname $0)/libs/luggage.sh
+# Inlcude luggage_isu functions for building
+. $(dirname $0)/libs/luggage_isu.sh
 
 init
 install_site
 
-# Install Theme - Suitcase
-drush $ALIAS en -y suitcase
-drush $ALIAS vset theme_default suitcase
+install_luggage_isu_suitcase
 
 install_luggage_features
 
-# Install luggage_isu features
-drush -v $ALIAS en -y luggage_pubcookie luggage_piwik luggage_people_isu suitcase_config
+install_luggage_isu_features
 
 finish
