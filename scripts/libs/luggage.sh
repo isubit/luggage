@@ -53,7 +53,8 @@ install_site() {
 
 install_luggage_features() {
     ##Install all the Luggage features.
-    drush -v $ALIAS en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_placeholder luggage_people luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
+    drush -v $ALIAS en -y luggage_core luggage_contrib luggage_ckeditor luggage_placeholder luggage_indicator luggage_vars luggage_ui luggage_roles luggage_solr luggage_roles_solr luggage_announcements luggage_biblio luggage_events luggage_events_solr luggage_news luggage_news_solr luggage_people luggage_people_solr luggage_people_expertise luggage_projects luggage_resources luggage_resources_solr luggage_seo
+
 }
 
 finish() {
