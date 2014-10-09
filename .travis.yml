@@ -66,7 +66,7 @@ after_script:
   - drush runserver --server=builtin 8080 &
   - sleep 4
   - drush vset --yes simpletest_verbose FALSE
-  - drush test-run 'luggage' --debug --uri=http://127.0.0.1:8080
+  - drush sudo -u apache test-run --debug --all --uri=http://127.0.0.1:8080
   
 notifications:
   email: false
