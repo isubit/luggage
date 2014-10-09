@@ -1,0 +1,33 @@
+diff --git a/sites/all/modules/redirect/redirect.module b/sites/all/modules/redirect/redirect.module
+index 9b0a71c..0f1a127 100644
+--- a/sites/all/modules/redirect/redirect.module
++++ b/sites/all/modules/redirect/redirect.module
+@@ -394,6 +394,28 @@ function redirect_path_update(array $path) {
+   }
+ 
+   if (!empty($path['original']['pid']) && $path['original']['pid'] == $path['pid'] && $path['original']['alias'] != $path['alias']) {
++    // If the alias being assigned is the same as a redirect already
++    // assigned to this source then delete the previous redirect.
++    // Example: 
++    // You alias node/1 to foo and save it.
++    // Now you alias node/1 to bar and save it.
++    // Now you alias node/1 to foo again -- Drupal should delete
++    // the previous foo redirect before assigning your new foo alias to node/1.
++    $redirect = new stdClass();
++    redirect_object_prepare($redirect);
++    $redirect->source = $path['alias'];
++    // redirect_hash() does not use $redirect->redirect
++    //$redirect->redirect = $path['source'];
++    $redirect->language = $path['language'];
++    // Check if the new alias already exists as a redirect.
++    $hash = redirect_hash($redirect);
++    $existing_redirect = redirect_load_by_hash($hash);
++    // If the new alias is the same as an existing redirect that was
++    // assigned to the same source, delete the existing redirect.
++    if ($existing_redirect && $path['source'] == $existing_redirect->redirect) {
++      redirect_delete($existing_redirect->rid);
++    } 
++    
+     $redirect = new stdClass();
+     redirect_object_prepare($redirect);
+     $redirect->source = $path['original']['alias'];
