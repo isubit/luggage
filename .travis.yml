@@ -67,7 +67,7 @@ after_script:
   - sleep 4
   - drush --yes en simpletest
   - drush vset --yes simpletest_verbose FALSE
-  - drush test-run "menu pathauto" --uri=http://127.0.0.1:8080 --all --debug
+  - drush test-run "menu pathauto" --uri=http://127.0.0.1:8080 --debug
 
 notifications:
   email: false
