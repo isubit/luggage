@@ -65,9 +65,10 @@ script:
 after_script:
   - drush runserver --server=builtin 8080 &
   - sleep 4
+  - drush --yes en simpletest
   - drush vset --yes simpletest_verbose FALSE
-  - drush test-run 'luggage' --debug --uri=http://127.0.0.1:8080
-  
+  - drush test-run "menu pathauto path pathologic" --uri=http://127.0.0.1:8080 --debug
+
 notifications:
   email: false
   irc: 
