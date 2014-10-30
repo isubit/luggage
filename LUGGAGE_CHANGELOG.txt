@@ -2,4 +2,5 @@ Luggage 2.4.0, 2014-10-30
 Drupal 7.32, 2014-10-15
 --------------------------
 - Lugg-208 - Enable “publish content” on all content types so users can manage publish/unpublish
+- Lugg-234 - Better Formats Bug on create people form
 
