@@ -8,3 +8,4 @@ Drupal 7.32, 2014-10-15
 - LUGG-199 - fixed - "conent" should be content in My Content views path
 - LUGG-200 - fixed - Make tags an enabled facet
 - LUGG-106 - fixed - Uncheck node and user search modules
+- LUGG-158 - fixed - Luggage build scripts not executable
