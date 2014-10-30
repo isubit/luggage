@@ -9,3 +9,4 @@ Drupal 7.32, 2014-10-15
 - LUGG-200 - fixed - Make tags an enabled facet
 - LUGG-106 - fixed - Uncheck node and user search modules
 - LUGG-158 - fixed - Luggage build scripts not executable
+- LUGG-211 - fixed - Help text for Announcement Banner Image field
