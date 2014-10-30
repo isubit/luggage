@@ -5,3 +5,4 @@ Drupal 7.32, 2014-10-15
 - Lugg-234 - fixed - Better Formats Bug on create people form
 - Lugg-117 - fixed - Change Biblio content type human name to Publication
 - Lugg-122 - fixed - Categories is missing from Project.
+- LUGG-199 - fixed - "conent" should be content in My Content views path
