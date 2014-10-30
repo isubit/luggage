@@ -12,3 +12,4 @@ Drupal 7.32, 2014-10-15
 - LUGG-211 - fixed - Help text for Announcement Banner Image field
 - LUGG-235 - fixed - xml sitemap submitted to bing and google by default
 - LUGG-236 - fixed - xml sitemap default includes for content, menus and vocabularies
+- LUGG-222 - fixed - Undefined index: term in luggage_solr_pathauto_alias_alter()
