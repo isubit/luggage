@@ -1,6 +1,7 @@
-Luggage 2.4.2, 2014-11-20
+Luggage 2.4.2, 2014-11-27
 Drupal 7.34, 2014-11-19
 --------------------------
+- LUGG-232 - fixed - <sup> and <sub> tags are filtered out
 
 Luggage 2.4.1, 2014-11-09
 Drupal 7.33, 2014-11-07
