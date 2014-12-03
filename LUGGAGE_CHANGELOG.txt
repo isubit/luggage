@@ -1,3 +1,8 @@
+Luggage 2.5.0, 2014-12-3
+Drupal 7.34, 2014-11-19
+--------------------------
+- Added Selenium tests for creating testable data/content.
+
 Luggage 2.4.2, 2014-11-20
 Drupal 7.34, 2014-11-19
 --------------------------
