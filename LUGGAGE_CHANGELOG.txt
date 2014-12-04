@@ -2,12 +2,13 @@ Luggage 2.5.0, 2014-12-3
 Drupal 7.34, 2014-11-19
 --------------------------
 - Added Selenium tests for creating testable data/content.
-- LUGG-223 - luggage_resources #2 - fixed - My Resources viewable by anonymous
-- LUGG-71 - Ability to add cover images to publications
-- LUGG-206 - Adding a new file to an Image filed should say “Add a new image” instead of “Add a new file"
-- LUGG-151 - Announcement text not clickable
-- LUGG-186 - Long names with hyphens aren't able to wrap
-- LUGG-259 - slider styling needs fixed for default themes - luggage_announcements #6
+- LUGG-223 - fixed - luggage_resources #2 - fixed - My Resources viewable by anonymous
+- LUGG-71 - fixed - Ability to add cover images to publications
+- LUGG-206 - fixed - Adding a new file to an Image filed should say “Add a new image” instead of “Add a new file"
+- LUGG-151 - fixed - Announcement text not clickable
+- LUGG-186 - fixed - Long names with hyphens aren't able to wrap
+- LUGG-259 - fixed - slider styling needs fixed for default themes - luggage_announcements #6
+- LUGG-253 - removed core patch - re-evaluate https://drupal.org/node/1525176
 
 Luggage 2.4.2, 2014-11-20
 Drupal 7.34, 2014-11-19
