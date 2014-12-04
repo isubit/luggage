@@ -4,14 +4,17 @@ Drupal 7.34, 2014-11-19
 - Added Selenium tests for creating testable data/content.
 - LUGG-223 - luggage_resources #2 - fixed - My Resources viewable by anonymous
 - LUGG-71 - Ability to add cover images to publications
+- LUGG-206 - Adding a new file to an Image filed should say “Add a new image” instead of “Add a new file"
 
 Luggage 2.4.2, 2014-11-20
 Drupal 7.34, 2014-11-19
 --------------------------
+Hot fixed Drupal
 
 Luggage 2.4.1, 2014-11-09
 Drupal 7.33, 2014-11-07
 --------------------------
+Hot fixed Drupal
 
 Luggage 2.4.0, 2014-10-30
 Drupal 7.32, 2014-10-15
