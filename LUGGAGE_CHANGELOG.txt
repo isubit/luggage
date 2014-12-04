@@ -6,6 +6,7 @@ Drupal 7.34, 2014-11-19
 - LUGG-71 - Ability to add cover images to publications
 - LUGG-206 - Adding a new file to an Image filed should say “Add a new image” instead of “Add a new file"
 - LUGG-151 - Announcement text not clickable
+- LUGG-186 - Long names with hyphens aren't able to wrap
 
 Luggage 2.4.2, 2014-11-20
 Drupal 7.34, 2014-11-19
