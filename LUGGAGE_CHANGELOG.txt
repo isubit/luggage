@@ -11,6 +11,7 @@ Drupal 7.34, 2014-11-19
 - LUGG-253 - removed core patch - re-evaluate https://drupal.org/node/1525176
 - LUGG-259 - fixed - slider styling needs fixed for default themes - luggage_announcements #6
 - LUGG-285 - fixed - unsetting theme_hook_original to work around warning - https://github.com/isubit/luggage_roles/pull/3
+- LUGG-302 - fixed - add hook_update_projects_alter to new submodules
 - luggage_announcements #1 - fixed - added navigation dots
 
 Luggage 2.4.2, 2014-11-27
