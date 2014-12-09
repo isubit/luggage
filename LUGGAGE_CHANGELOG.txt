@@ -1,4 +1,4 @@
-Luggage 2.5.0, 2014-12-3
+Luggage 2.5.0, 2014-12-9
 Drupal 7.34, 2014-11-19
 --------------------------
 - Added Selenium tests for creating testable data/content.
@@ -11,9 +11,11 @@ Drupal 7.34, 2014-11-19
 - LUGG-253 - removed core patch - re-evaluate https://drupal.org/node/1525176
 - LUGG-285 - fixed - unsetting theme_hook_original to work around warning - https://github.com/isubit/luggage_roles/pull/3
 
-Luggage 2.4.2, 2014-11-20
+Luggage 2.4.2, 2014-11-27
 Drupal 7.34, 2014-11-19
 --------------------------
+- LUGG-232 - fixed - <sup> and <sub> tags are filtered out
+- LUGG-205 - Add "Remove Format" button to the CKEditor bar
 Hot fixed Drupal
 
 Luggage 2.4.1, 2014-11-09
