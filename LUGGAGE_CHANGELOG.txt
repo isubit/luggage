@@ -2,20 +2,22 @@ Luggage 2.5.0, 2014-12-9
 Drupal 7.34, 2014-11-19
 --------------------------
 - Added Selenium tests for creating testable data/content.
-- LUGG-223 - fixed - luggage_resources #2 - fixed - My Resources viewable by anonymous
 - LUGG-71 - fixed - Ability to add cover images to publications
-- LUGG-206 - fixed - Adding a new file to an Image filed should say “Add a new image” instead of “Add a new file"
 - LUGG-151 - fixed - Announcement text not clickable
 - LUGG-186 - fixed - Long names with hyphens aren't able to wrap
-- LUGG-259 - fixed - slider styling needs fixed for default themes - luggage_announcements #6
+- LUGG-187 - fixed - Default path pattern should not be content/...
+- LUGG-206 - fixed - Adding a new file to an Image filed should say “Add a new image” instead of “Add a new file"
+- LUGG-223 - fixed - luggage_resources #2 - fixed - My Resources viewable by anonymous
 - LUGG-253 - removed core patch - re-evaluate https://drupal.org/node/1525176
+- LUGG-259 - fixed - slider styling needs fixed for default themes - luggage_announcements #6
 - LUGG-285 - fixed - unsetting theme_hook_original to work around warning - https://github.com/isubit/luggage_roles/pull/3
+- luggage_announcements #1 - fixed - added navigation dots
 
 Luggage 2.4.2, 2014-11-27
 Drupal 7.34, 2014-11-19
 --------------------------
-- LUGG-232 - fixed - <sup> and <sub> tags are filtered out
 - LUGG-205 - Add "Remove Format" button to the CKEditor bar
+- LUGG-232 - fixed - <sup> and <sub> tags are filtered out
 Hot fixed Drupal
 
 Luggage 2.4.1, 2014-11-09
