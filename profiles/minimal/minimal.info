@@ -4,9 +4,3 @@ version = VERSION
 core = 7.x
 dependencies[] = block
 dependencies[] = dblog
-
-; Information added by Drupal.org packaging script on 2014-10-15
-version = "7.32"
-project = "drupal"
-datestamp = "1413387510"
-

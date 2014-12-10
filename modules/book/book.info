@@ -6,9 +6,3 @@ core = 7.x
 files[] = book.test
 configure = admin/content/book/settings
 stylesheets[all][] = book.css
-
-; Information added by Drupal.org packaging script on 2014-10-15
-version = "7.32"
-project = "drupal"
-datestamp = "1413387510"
-
