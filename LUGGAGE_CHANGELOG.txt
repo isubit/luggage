@@ -1,6 +1,7 @@
 Luggage 3.1.0, 2015-2-2
 Drupal 7.34, 2014-11-19
 -----------------------
+- LUGG-301 - fixed - Rename $stuff
 - LUGG-311 - fixed - Luggage Indicator should use node name instead of type
 
 Luggage 3.0.0, 2015-1-8
