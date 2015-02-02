@@ -2,7 +2,9 @@ Luggage 3.1.0, 2015-2-2
 Drupal 7.34, 2014-11-19
 -----------------------
 - LUGG-85/luggage_events #1 - fixed - added archive view and event type exposed filter
+- LUGG-275/luggage_news #1/luggage_events #1/luggage_announcements #11/luggage_projects #3/luggage_roles #4 - fixed - Maximum image inert width too small
 - LUGG-286/luggage_roles #2 - fixed - Resouce should be resource
+- LUGG-289/luggage_events #2 - fixed Images not insertable into events
 - LUGG-298/luggage_vars #1 - fixed - Only administrators should be able to register new accounts
 - LUGG-301 - fixed - Rename $stuff
 - LUGG-311 - fixed - Luggage Indicator should use node name instead of type
