@@ -2,6 +2,10 @@ Luggage 3.0.0, 2015-1-8
 Drupal 7.34, 2014-11-19
 -----------------------
 - LUGG-316 - fixed - Luggage_people needs to be updated in coordination with shibboleth
+- LUGG-331 - fixed - Autopopulate People fields from LDAP attributes
+- LUGG-333 - fixed - LDAP title stomping on node title
+- LUGG-334 - fixed - My Public Profile wrong menu level
+
 
 Luggage 2.5.0, 2014-12-9
 Drupal 7.34, 2014-11-19
