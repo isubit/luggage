@@ -6,6 +6,7 @@ Drupal 7.34, 2014-11-19
 - LUGG-298/luggage_vars #1 - fixed - Only administrators should be able to register new accounts
 - LUGG-301 - fixed - Rename $stuff
 - LUGG-311 - fixed - Luggage Indicator should use node name instead of type
+- LUGG-313/luggage_announcements #10 - fixed - removing borders from slider navigation
 
 Luggage 3.0.0, 2015-1-8
 Drupal 7.34, 2014-11-19
