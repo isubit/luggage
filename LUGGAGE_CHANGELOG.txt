@@ -2,6 +2,7 @@ Luggage 3.1.0, 2015-2-2
 Drupal 7.34, 2014-11-19
 -----------------------
 - LUGG-286/luggage_roles #2 - fixed - Resouce should be resource
+- LUGG-298/luggage_vars #1 - fixed - Only administrators should be able to register new accounts
 - LUGG-301 - fixed - Rename $stuff
 - LUGG-311 - fixed - Luggage Indicator should use node name instead of type
 
