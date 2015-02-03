@@ -8,6 +8,7 @@ Drupal 7.34, 2014-11-19
 - LUGG-295/luggage_announcements #12 - fixed - adding announcement type vocabulary and field to announcements
 - LUGG-298/luggage_vars #1 - fixed - Only administrators should be able to register new accounts
 - LUGG-301 - fixed - Rename $stuff
+- LUGG-306/luggage_people #5 - fixed - Removing people category filter from people expertise view
 - LUGG-311 - fixed - Luggage Indicator should use node name instead of type
 - LUGG-313/luggage_announcements #10 - fixed - removing borders from slider navigation
 
