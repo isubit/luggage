@@ -13,6 +13,7 @@ Drupal 7.34, 2014-11-19
 - LUGG-306/luggage_people #5 - fixed - Removing people category filter from people expertise view
 - LUGG-311 - fixed - Luggage Indicator should use node name instead of type
 - LUGG-313/luggage_announcements #10 - fixed - removing borders from slider navigation
+- LUGG-340 -fixed - Search path for solr needs to be held
 
 Luggage 3.0.0, 2015-1-8
 Drupal 7.34, 2014-11-19
