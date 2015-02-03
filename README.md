@@ -24,7 +24,7 @@ If this is not you, then Luggage is right for you!
 Version
 ----
 
-Branch 2.x.x currently `development`
+Branch 3.x.x currently `development`
 
 Technology
 -----------
@@ -36,7 +36,6 @@ Luggage uses a number of open source projects to work properly:
 * [Ckeditor][] - HTML text editor designed to simplify web content creation
 * [Flexslider2][] - The best responsive slider. Period.
 * [Apache Solr][] - search platform.
-* [Piwik][] - web analytics platform
 
 Installation
 --------------
@@ -93,8 +92,6 @@ License
 [Ckeditor]:http://ckeditor.com/
 [Flexslider2]:http://flexslider.woothemes.com/
 [Apache Solr]:http://lucene.apache.org/solr/
-[Piwik]:http://piwik.org/
-[Pubcookie]:http://www.pubcookie.org/
 [GPLv2]:http://www.gnu.org/licenses/gpl-2.0.html
 [Travis]:https://travis-ci.org/isubit/luggage.svg?branch=master
 [Luggage ISU]:https://github.com/isubit/luggage_isu
