@@ -3,6 +3,7 @@ Drupal 7.34, 2014-11-19
 -----------------------
 - LUGG-85/luggage_events #1 - fixed - added archive view and event type exposed filter
 - LUGG-275/luggage_news #1/luggage_events #1/luggage_announcements #11/luggage_projects #3/luggage_roles #4 - fixed - Maximum image inert width too small
+- LUGG-279/luggage_news #2 - fixed - News items should have dates. Friendly dates.
 - LUGG-286/luggage_roles #2 - fixed - Resouce should be resource
 - LUGG-289/luggage_events #2 - fixed - Images not insertable into events
 - LUGG-295/luggage_announcements #12 - fixed - adding announcement type vocabulary and field to announcements
