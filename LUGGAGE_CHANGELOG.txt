@@ -32,7 +32,7 @@ Drupal 7.34, 2014-11-19
 - LUGG-151 - fixed - Announcement text not clickable
 - LUGG-186 - fixed - Long names with hyphens aren't able to wrap
 - LUGG-187 - fixed - Default path pattern should not be content/...
-- LUGG-206 - fixed - Adding a new file to an Image filed should say “Add a new image” instead of “Add a new file"
+- LUGG-206 - fixed - Adding a new file to an Image filed should say "Add a new image" instead of "Add a new file"
 - LUGG-223 - fixed - luggage_resources #2 - fixed - My Resources viewable by anonymous
 - LUGG-253 - removed core patch - re-evaluate https://drupal.org/node/1525176
 - LUGG-259 - fixed - slider styling needs fixed for default themes - luggage_announcements #6
@@ -61,10 +61,10 @@ Drupal 7.32, 2014-10-15
 - LUGG-128 - fixed - Site index terms link to null search
 - LUGG-199 - fixed - "conent" should be content in My Content views path
 - LUGG-200 - fixed - Make tags an enabled facet
-- Lugg-208 - fixed - Enable “publish content” on all content types so users can manage publish/unpublish
+- Lugg-208 - fixed - Enable "publish content" on all content types so users can manage publish/unpublish
 - LUGG-158 - fixed - Luggage build scripts not executable
 - LUGG-211 - fixed - Help text for Announcement Banner Image field
-- LUGG-204 - fixed - Remove “Meta tags” vertical tab from when editing content
+- LUGG-204 - fixed - Remove "Meta tags" vertical tab from when editing content
 - LUGG-222 - fixed - Undefined index: term in luggage_solr_pathauto_alias_alter()
 - Lugg-234 - fixed - Better Formats Bug on create people form
 - LUGG-235 - fixed - xml sitemap submitted to bing and google by default
