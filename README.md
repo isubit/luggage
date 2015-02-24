@@ -72,7 +72,7 @@ Refer to the [contribution documentation](http://www.biology-it.iastate.edu/lugg
 
 Troubleshooting
 ----
-Read/Search [Luggage Ducumentation][]
+Read/Search [Luggage Documentation][]
 
 Join us on IRC FreeNode @ #luggage
 * Need help setting up IRC? https://www.drupal.org/irc/setting-up
