@@ -23,8 +23,16 @@ If this is not you, then Luggage is right for you!
 
 Version
 ----
+Development of Luggage takes place on the 'development' branch in Github. Pull requests should be made against the 'development' branch.
 
-Branch 3.x.x currently `development`
+Releases take place on the 'master' branch. 
+
+The 2.x.x branch of Luggage is being maintained for security fixes only.
+
+Upgrading from Luggage 2.x.x to 3.x.x
+-------------------------------------
+1. Use git to upgrade your code
+2. Update your git submodules
 
 Technology
 -----------
@@ -46,7 +54,7 @@ Below is the brief run-down on how to install Luggage. The full installation doc
 * Drush is installed
 * Git is installed
 
-Clone this repos latest release into the root directory that your web server points to.
+Clone this repo's latest release into the root directory that your web server points to.
 Releases: https://github.com/isubit/luggage/releases
 
 
