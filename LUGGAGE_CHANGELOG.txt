@@ -1,72 +1,76 @@
+How to read this changelog:
+
+The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
+
 Luggage 3.1.0, 2015-2-2
 Drupal 7.34, 2014-11-19
 -----------------------
-- LUGG-85/luggage_events #1 - fixed - added archive view and event type exposed filter
-- LUGG-275/luggage_news #1/luggage_events #1/luggage_announcements #11/luggage_projects #3/luggage_roles #4 - fixed - Maximum image inert width too small
-- LUGG-279/luggage_news #2 - fixed - News items should have dates. Friendly dates.
-- LUGG-286/luggage_roles #2 - fixed - Resouce should be resource
-- LUGG-289/luggage_events #2 - fixed - Images not insertable into events
-- LUGG-295/luggage_announcements #12 - fixed - adding announcement type vocabulary and field to announcements
-- LUGG-298/luggage_vars #1 - fixed - Only administrators should be able to register new accounts
-- LUGG-301 - fixed - Rename $stuff
-- LUGG-305/luggage_biblio #1 - fixed - Don't display author and date information
-- LUGG-306/luggage_people #5 - fixed - Removing people category filter from people expertise view
-- LUGG-311 - fixed - Luggage Indicator should use node name instead of type
-- LUGG-313/luggage_announcements #10 - fixed - removing borders from slider navigation
+- LUGG-85/luggage_events #1 - added archive view and event type exposed filter
+- LUGG-275/luggage_news #1/luggage_events #1/luggage_announcements #11/luggage_projects #3/luggage_roles #4 - Maximum image insert width too small
+- LUGG-279/luggage_news #2 - News items should have friendly dates
+- LUGG-286/luggage_roles #2 - Resouce should be resource
+- LUGG-289/luggage_events #2 - Images not insertable into events
+- LUGG-295/luggage_announcements #12 - adding announcement type vocabulary and field to announcements
+- LUGG-298/luggage_vars #1 - Only administrators should be able to register new accounts
+- LUGG-301 - Rename $stuff
+- LUGG-305/luggage_biblio #1 - Don't display author and date information
+- LUGG-306/luggage_people #5 - Removing people category filter from people expertise view
+- LUGG-311 - Luggage Indicator should use node name instead of type
+- LUGG-313/luggage_announcements #10 - removing borders from slider navigation
 - LUGG-340 -fixed - Search path for solr needs to be held
 
 Luggage 3.0.0, 2015-1-8
 Drupal 7.34, 2014-11-19
 -----------------------
-- LUGG-316 - fixed - Luggage_people needs to be updated in coordination with shibboleth
-- LUGG-331 - fixed - Autopopulate People fields from LDAP attributes
-- LUGG-333 - fixed - LDAP title stomping on node title
-- LUGG-334 - fixed - My Public Profile wrong menu level
+- LUGG-316 - Luggage_people needs to be updated in coordination with shibboleth
+- LUGG-331 - Autopopulate People fields from LDAP attributes
+- LUGG-333 - LDAP title stomping on node title
+- LUGG-334 - My Public Profile wrong menu level
 
 
 Luggage 2.5.0, 2014-12-9
 Drupal 7.34, 2014-11-19
 --------------------------
 - Added Selenium tests for creating testable data/content.
-- LUGG-71 - fixed - Ability to add cover images to publications
-- LUGG-151 - fixed - Announcement text not clickable
-- LUGG-186 - fixed - Long names with hyphens aren't able to wrap
-- LUGG-187 - fixed - Default path pattern should not be content/...
-- LUGG-206 - fixed - Adding a new file to an Image filed should say “Add a new image” instead of “Add a new file"
-- LUGG-223 - fixed - luggage_resources #2 - fixed - My Resources viewable by anonymous
+- LUGG-71 - Ability to add cover images to publications
+- LUGG-151 - Announcement text not clickable
+- LUGG-186 - Long names with hyphens aren't able to wrap
+- LUGG-187 - Default path pattern should not be content/...
+- LUGG-206 - Adding a new file to an Image filed should say "Add a new image" instead of "Add a new file"
+- LUGG-223 - luggage_resources #2 - My Resources viewable by anonymous
 - LUGG-253 - removed core patch - re-evaluate https://drupal.org/node/1525176
-- LUGG-259 - fixed - slider styling needs fixed for default themes - luggage_announcements #6
-- LUGG-285 - fixed - unsetting theme_hook_original to work around warning - https://github.com/isubit/luggage_roles/pull/3
-- LUGG-302 - fixed - add hook_update_projects_alter to new submodules
-- luggage_announcements #1 - fixed - added navigation dots
+- LUGG-259/luggage_announcements #6 - slider styling fixed for default themes
+- LUGG-285 - unsetting theme_hook_original to work around warning - https://github.com/isubit/luggage_roles/pull/3
+- LUGG-302 - add hook_update_projects_alter to new submodules
+- luggage_announcements #1 - added navigation dots
 
 Luggage 2.4.2, 2014-11-27
 Drupal 7.34, 2014-11-19
 --------------------------
 - LUGG-205 - Add "Remove Format" button to the CKEditor bar
-- LUGG-232 - fixed - <sup> and <sub> tags are filtered out
-Hot fixed Drupal
+- LUGG-232 - <sup> and <sub> tags are filtered out
+Hot-fixed Drupal
 
 Luggage 2.4.1, 2014-11-09
 Drupal 7.33, 2014-11-07
 --------------------------
-Hot fixed Drupal
+Hot-fixed Drupal
 
 Luggage 2.4.0, 2014-10-30
 Drupal 7.32, 2014-10-15
 --------------------------
-- LUGG-106 - fixed - Uncheck node and user search modules
-- Lugg-117 - fixed - Change Biblio content type human name to Publication
-- Lugg-122 - fixed - Categories is missing from Project.
-- LUGG-128 - fixed - Site index terms link to null search
-- LUGG-199 - fixed - "conent" should be content in My Content views path
-- LUGG-200 - fixed - Make tags an enabled facet
-- Lugg-208 - fixed - Enable “publish content” on all content types so users can manage publish/unpublish
-- LUGG-158 - fixed - Luggage build scripts not executable
-- LUGG-211 - fixed - Help text for Announcement Banner Image field
-- LUGG-204 - fixed - Remove “Meta tags” vertical tab from when editing content
-- LUGG-222 - fixed - Undefined index: term in luggage_solr_pathauto_alias_alter()
-- Lugg-234 - fixed - Better Formats Bug on create people form
-- LUGG-235 - fixed - xml sitemap submitted to bing and google by default
-- LUGG-236 - fixed - xml sitemap default includes for content, menus and vocabularies
-- luggage_roles #1 - fixed - Site Index view should be only Tag terms - https://github.com/isubit/luggage_roles/issues/1
+- LUGG-106 - Uncheck node and user search modules
+- Lugg-117 - Change Biblio content type human name to Publication
+- Lugg-122 - Categories is missing from Project.
+- LUGG-128 - Site index terms link to null search
+- LUGG-199 - "conent" should be content in My Content views path
+- LUGG-200 - Make tags an enabled facet
+- Lugg-208 - Enable "publish content" on all content types so users can manage publish/unpublish
+- LUGG-158 - Luggage build scripts not executable
+- LUGG-211 - Help text for Announcement Banner Image field
+- LUGG-204 - Remove "Meta tags" vertical tab from when editing content
+- LUGG-222 - Undefined index: term in luggage_solr_pathauto_alias_alter()
+- Lugg-234 - Better Formats Bug on create people form
+- LUGG-235 - xml sitemap submitted to bing and google by default
+- LUGG-236 - xml sitemap default includes for content, menus and vocabularies
+- luggage_roles #1 - Site Index view should be only Tag terms - https://github.com/isubit/luggage_roles/issues/1
