@@ -103,5 +103,5 @@ License
 [GPLv2]:http://www.gnu.org/licenses/gpl-2.0.html
 [Travis]:https://travis-ci.org/isubit/luggage.svg?branch=master
 [Luggage ISU]:https://github.com/isubit/luggage_isu
-[Luggage Ducumentation]:http://www.biology-it.iastate.edu/luggage_doc/
+[Luggage Documentation]:http://www.biology-it.iastate.edu/luggage_doc/
 
