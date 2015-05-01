@@ -7,7 +7,7 @@
 # - Execution from a shell in the webroot directory.
 #
 
-# Inlcude luggage functions for building
+# Include luggage functions for building
 . $(dirname $0)/libs/luggage.sh
 
 init
