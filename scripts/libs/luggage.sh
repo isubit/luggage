@@ -40,6 +40,8 @@ init() {
     else
         DBCREDENTIALS=$DBCREDS
     fi
+    
+    [ -z "$APACHEUSER" ] && APACHEUSER=apache
 
     # Get submodules defined in .gitmodules
     git submodule update --init --force
@@ -52,7 +54,7 @@ install_site() {
 }
 
 install_luggage_features() {
-    ##Install all the Luggage features.
+    # Install all the Luggage features.
     drush -v $ALIAS en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_news_solr luggage_placeholder luggage_people luggage_people_expertise luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
 }
 
@@ -64,7 +66,7 @@ finish() {
     drush $ALIAS cc all
     drush $ALIAS cron-run all --cli all > /dev/null 2>&1
 
-    # new files directory
+    # New files directory
     mkdir -p $DIRECTORY/files
     sudo chown -R $APACHEUSER $DIRECTORY/files
     sudo chmod -R g+w $DIRECTORY/files
