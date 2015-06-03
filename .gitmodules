@@ -55,3 +55,6 @@ url=git@github.com:isubit/luggage_vars.git
 [submodule "sites/all/modules/luggage/luggage_placeholder"]
 	path = sites/all/modules/luggage/luggage_placeholder
 url=git@github.com:isubit/luggage_placeholder.git
+[submodule "sites/all/modules/luggage/luggage_video"]
+	path = sites/all/modules/luggage/luggage_video
+	url = git@github.com:isubit/luggage_video.git
