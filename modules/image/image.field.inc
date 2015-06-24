@@ -149,7 +149,7 @@ function image_field_instance_settings_form($field, $instance) {
     '#type' => 'checkbox',
     '#title' => t('Enable <em>Title</em> field'),
     '#default_value' => $settings['title_field'],
-    '#description' => t('The title attribute is used as a tooltip when the mouse hovers over the image.'),
+    '#description' => t('The title field is text that shows when the user hovers their mouse over the image.'),
     '#weight' => 11,
   );
 
@@ -433,7 +433,7 @@ function image_field_widget_process($element, &$form_state, $form) {
     '#type' => 'textfield',
     '#title' => t('Title'),
     '#default_value' => isset($item['title']) ? $item['title'] : '',
-    '#description' => t('The title is used as a tool tip when the user hovers the mouse over the image.'),
+    '#description' => t('The title field is text that shows when the user hovers their mouse over the image.'),
     '#maxlength' => 1024,
     '#weight' => -1,
     '#access' => (bool) $item['fid'] && $settings['title_field'],
