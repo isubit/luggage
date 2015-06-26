@@ -2,6 +2,17 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
+Luggage 3.2.0, 2015-06-26
+Drupal 7.37, 2015-05-07
+-------------------------
+- LUGG-103 - Change ownership of People during login
+- LUGG-141 - luggage_projects UX improvements
+- LUGG-183 - sitemap links don't point to solr search
+- LUGG-296 - indicator shows "biblio" instead of "publication"
+- LUGG-347 - events page needs ability to upload arbitrary files (not just images)
+- LUGG-448 - Simplify permissions and roles
+- LUGG-458 - Content Editor and Publisher access to use the administration menu
+
 Luggage 3.1.4 2015-06-24
 Drupal 7.38, 2015-06-17
 ------------------------
