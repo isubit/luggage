@@ -2,8 +2,8 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
-Luggage 3.2.0, 2015-06-26
-Drupal 7.37, 2015-05-07
+Luggage 3.2.0, 2015-07-01
+Drupal 7.38, 2015-06-17
 -------------------------
 - LUGG-103 - Change ownership of People during login
 - LUGG-141 - luggage_projects UX improvements
@@ -12,6 +12,14 @@ Drupal 7.37, 2015-05-07
 - LUGG-347 - events page needs ability to upload arbitrary files (not just images)
 - LUGG-448 - Simplify permissions and roles
 - LUGG-458 - Content Editor and Publisher access to use the administration menu
+- LUGG-490 - My resources view should not be
+- LUGG-491 - remove announcement menu item and associated table view
+- LUGG-492 - authenticated roles need to see management menu items
+- LUGG-493 - Set main-menu default order
+- LUGG-494 - Content Editor - should not have people permissions, they belong with people editor
+- LUGG-495 - Authenticated User - should not have permission to create People
+- LUGG-496 - Taxonomy editor needs administer taxonomy permission
+
 
 Luggage 3.1.4 2015-06-24
 Drupal 7.38, 2015-06-17
