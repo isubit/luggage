@@ -13,6 +13,7 @@ Drupal 7.38, 2015-06-17
 - LUGG-430 - Add sortable columns and filter to My Content view
 - LUGG-438/luggage_indicator #3/luggage_people #7/luggage_resources #5/luggage_roles #5 - Respect module name spacing in private functions
 - LUGG-450 - Add Resources view
+- LUGG-498 - Image field set to limit of 5 - should be unlimited
 
 Luggage 3.2.0, 2015-07-01
 Drupal 7.38, 2015-06-17
