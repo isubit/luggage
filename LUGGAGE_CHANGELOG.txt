@@ -6,6 +6,7 @@ Luggage_Hofmockel, date
 Drupal 7.38, 2015-06-17
 -------------------------
 - LUGG-120 - Settings for linkchecker
+- LUGG-228 - Remove Title from resource display
 - LUGG-391 - Allow Summary on Announcement Content Type
 - LUGG-427 - Unnecessary abbreviation in News
 - LUGG-415 - Remove redundant titles from Resource pages
