@@ -2,7 +2,7 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
-Luggage_Hofmockel, date
+Luggage 3.2.1, 2015-07-06
 Drupal 7.38, 2015-06-17
 -------------------------
 - LUGG-120 - Settings for linkchecker
