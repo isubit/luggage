@@ -5,6 +5,7 @@ The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github iss
 Luggage_Hofmockel, date
 Drupal 7.38, 2015-06-17
 -------------------------
+- LUGG-120 - Settings for linkchecker
 - LUGG-450 - Add Resources view
 - LUGG-438/luggage_indicator #3/luggage_people #7/luggage_resources #5/luggage_roles #5 - Respect module name spacing in private functions
 
