@@ -7,7 +7,7 @@ Drupal 7.38, 2015-06-17
 -------------------------
 - LUGG-120 - Settings for linkchecker
 - LUGG-228 - Remove Title from resource display
-- LUGG-391 - Allow Summary on Announcement Content Type
+- LUGG-391/luggage_announcements #14 - Allow Summary on Announcement Content Type
 - LUGG-427/luggage_news #3 - Unnecessary abbreviation in News
 - LUGG-415 - Remove redundant titles from Resource pages
 - LUGG-430 - Add sortable columns and filter to My Content view
