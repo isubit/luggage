@@ -7,6 +7,7 @@ Drupal 7.38, 2015-06-17
 -------------------------
 - LUGG-120 - Settings for linkchecker
 - LUGG-391 - Allow Summary on Announcement Content Type
+- LUGG-427 - Unnecessary abbreviation in News
 - LUGG-415 - Remove redundant titles from Resource pages
 - LUGG-430 - Add sortable columns and filter to My Content view
 - LUGG-438/luggage_indicator #3/luggage_people #7/luggage_resources #5/luggage_roles #5 - Respect module name spacing in private functions
