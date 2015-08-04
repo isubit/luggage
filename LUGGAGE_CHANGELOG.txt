@@ -2,6 +2,11 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
+Luggage 3.2.2, 2015-08-05
+Drupal 7.38, 2015-06-17
+-------------------------
+- LUGG-514 - URLs longer than 80 get truncated in the announcement slider href
+
 Luggage 3.2.1, 2015-07-06
 Drupal 7.38, 2015-06-17
 -------------------------
