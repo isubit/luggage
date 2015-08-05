@@ -7,6 +7,7 @@ Drupal 7.38, 2015-06-17
 -------------------------
 - LUGG-190 - Create display for file upload in Biblio
 - LUGG-290 - Add Resource Category to Resource content type
+- LUGG-308/luggage_people #3/luggage_people #4 - Inconsistent theming on luggage_people
 - LUGG-351 - Add pi/co-pi to 'projects'
 - LUGG-425 - Added Project Type and views filter on Project Type
 - LUGG-443 - Unable to insert file on an announcement
