@@ -12,6 +12,7 @@ Drupal 7.38, 2015-06-17
 - LUGG-425 - Added Project Type and views filter on Project Type
 - LUGG-431 - Underline style is getting filtered out in CKEditor
 - LUGG-443 - Unable to insert file on an announcement
+- LUGG-465 - Define luggage version
 - LUGG-514 - URLs longer than 80 get truncated in the announcement slider href
 
 Luggage 3.2.1, 2015-07-06
