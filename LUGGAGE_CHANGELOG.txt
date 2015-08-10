@@ -2,7 +2,7 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
-Luggage 3.2.2, 2015-08-05
+Luggage 3.2.2, 2015-08-10
 Drupal 7.38, 2015-06-17
 -------------------------
 - LUGG-190 - Create display for file upload in Biblio
