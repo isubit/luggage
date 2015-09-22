@@ -5,6 +5,7 @@ The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github iss
 Luggage 3.2.4, 2015-09-22
 Drupal 7.39, 2015-08-19
 -------------------------
+- LUGG-299 - Disabled Administrator Role
 - LUGG-560/luggage_resources #8 - Screen capture service URL as a variable
 
 Luggage 3.2.3, 2015-08-20
