@@ -2,6 +2,73 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
+Luggage 3.2.4, 2015-09-22
+Drupal 7.39, 2015-08-19
+-------------------------
+- LUGG-299 - Disabled Administrator role
+- LUGG-307 - Fixed styling on Expertise view that showed empty boxes
+- LUGG-447/luggage_resources #10 - Fixed luggage_resources failure if <title> or <meta> is too long
+- LUGG-559 - Resources view now requires 'view published content' permission
+- LUGG-560/luggage_resources #8 - Screen capture service URL is now a variable
+
+Luggage 3.2.3, 2015-08-20
+Drupal 7.39, 2015-08-19
+-------------------------
+- LUGG-543 - Drupal 7.39 SA-CORE-2015-003
+
+Luggage 3.2.2, 2015-08-10
+Drupal 7.38, 2015-06-17
+-------------------------
+- LUGG-190 - Create display for file upload in Biblio
+- LUGG-290 - Add Resource Category to Resource content type
+- LUGG-308/luggage_people #3/luggage_people #4 - Inconsistent theming on luggage_people
+- LUGG-351 - Add PI/co-PI to Projects
+- LUGG-425 - Add Project Type and views filter on Project Type
+- LUGG-431 - Underline style is getting filtered out in CKEditor
+- LUGG-443 - Unable to insert file on an announcement
+- LUGG-465 - Define luggage version
+- LUGG-514 - URLs longer than 80 get truncated in the announcement slider href
+
+Luggage 3.2.1, 2015-07-06
+Drupal 7.38, 2015-06-17
+-------------------------
+- LUGG-120 - Settings for linkchecker
+- LUGG-228 - Remove Title from resource display
+- LUGG-391/luggage_announcements #14 - Allow Summary on Announcement Content Type
+- LUGG-427/luggage_news #3 - Unnecessary abbreviation in News
+- LUGG-415 - Remove redundant titles from Resource pages
+- LUGG-430 - Add sortable columns and filter to My Content view
+- LUGG-438/luggage_indicator #3/luggage_people #7/luggage_resources #5/luggage_roles #5 - Respect module name spacing in private functions
+- LUGG-450 - Add Resources view
+- LUGG-498/luggage_news #4 - Image field set to limit of 5 - should be unlimited
+
+Luggage 3.2.0, 2015-07-01
+Drupal 7.38, 2015-06-17
+-------------------------
+- LUGG-103 - Change ownership of People during login
+- LUGG-141 - luggage_projects UX improvements
+- LUGG-183 - sitemap links don't point to solr search
+- LUGG-296 - indicator shows "biblio" instead of "publication"
+- LUGG-347 - events page needs ability to upload arbitrary files (not just images)
+- LUGG-448 - Simplify permissions and roles
+- LUGG-458 - Content Editor and Publisher access to use the administration menu
+- LUGG-490 - My resources view should not be
+- LUGG-491 - remove announcement menu item and associated table view
+- LUGG-492 - authenticated roles need to see management menu items
+- LUGG-493 - Set main-menu default order
+- LUGG-494 - Content Editor - should not have people permissions, they belong with people editor
+- LUGG-495 - Authenticated User - should not have permission to create People
+- LUGG-496 - Taxonomy editor needs administer taxonomy permission
+
+
+Luggage 3.1.4 2015-06-24
+Drupal 7.38, 2015-06-17
+------------------------
+- LUGG-52 - ckeditor Image alt text is not synchronized with image field alt text
+- LUGG-342 - Image Insert inserts images at medium image style in announcements
+- LUGG-455 - A user should be able to add alt and title text to the announcement body images
+- LUGG-456 - A user should be able to add a file to announcements
+
 Luggage 3.1.3 2015-06-18
 Drupal 7.38, 2015-06-17
 ------------------------
