@@ -2,6 +2,15 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
+Luggage 3.2.4, 2015-09-22
+Drupal 7.39, 2015-08-19
+-------------------------
+- LUGG-299 - Disabled Administrator role
+- LUGG-307 - Fixed styling on Expertise view that showed empty boxes
+- LUGG-447/luggage_resources #10 - Fixed luggage_resources failure if <title> or <meta> is too long
+- LUGG-559 - Resources view now requires 'view published content' permission
+- LUGG-560/luggage_resources #8 - Screen capture service URL is now a variable
+
 Luggage 3.2.3, 2015-08-20
 Drupal 7.39, 2015-08-19
 -------------------------
