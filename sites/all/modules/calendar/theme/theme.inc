@@ -34,59 +34,34 @@ function template_preprocess_calendar_month(&$vars) {
 
   $month_rows = $rows;
   foreach ($rows as $weekno => $row) {
-//  https://drupal.org/comment/8405521#comment-8405521 https://drupal.org/files/issues/calendar-illegal_offset-1471400-78.patch
-//    foreach ($row as $day => $data) {
-//      $cell = $data['data'];
-//
-//      // If this cell is already rendered, like the weekno column,
-//      // move to the next item.
-//      if (!is_array($cell)) {
-//        $month_rows[$weekno][$day]['data'] = $cell;
-//        continue;
-//      }
-//      $data = $cell['datebox'];
-//      if ($cell['empty']) {
-//        $data .= $cell['empty'];
-//      }
-//      else {
-//        $data .= implode($cell['all_day']);
-//        foreach ($cell['items'] as $hour => $item) {
-//          $data .= implode($item);
     // If this row is already rendered, don't do anything.
-        if (!isset($row['data'])) {
-            foreach ($row as $day => $data) {
-                $cell = $data['data'];
+    if (!isset($row['data'])) {
+      foreach ($row as $day => $data) {
+        $cell = $data['data'];
 
-                // If this cell is already rendered, like the weekno column,
-                // move to the next item.
-                if (!is_array($cell)) {
-                    $month_rows[$weekno][$day]['data'] = $cell;
-                    continue;
+        // If this cell is already rendered, like the weekno column,
+        // move to the next item.
+        if (!is_array($cell)) {
+          $month_rows[$weekno][$day]['data'] = $cell;
+          continue;
         }
         $data = $cell['datebox'];
         if ($cell['empty']) {
-                    $data .= $cell['empty'];
-                  }
+          $data .= $cell['empty'];
+        }
         else {
-                    $data .= implode($cell['all_day']);
-                    foreach ($cell['items'] as $hour => $item) {
-                        $data .= implode($item);
-                      }
+          $data .= implode($cell['all_day']);
+          foreach ($cell['items'] as $hour => $item) {
+            $data .= implode($item);
+          }
           $data .= $cell['link'];
         }
         if ($view->date_info->mini) {
-                    $month_rows[$weekno][$day]['data'] = $data;
-                  }
-        else {
-                    $month_rows[$weekno][$day]['data'] = '<div class="inner">' . $data . '</div>';
+          $month_rows[$weekno][$day]['data'] = $data;
         }
-//        $data .= $cell['link'];
-//      }
-//      if ($view->date_info->mini) {
-//        $month_rows[$weekno][$day]['data'] = $data;
-//      }
-//      else {
-//        $month_rows[$weekno][$day]['data'] = '<div class="inner">' . $data . '</div>';
+        else {
+          $month_rows[$weekno][$day]['data'] = '<div class="inner">' . $data . '</div>';
+        }
       }
     }
   }
