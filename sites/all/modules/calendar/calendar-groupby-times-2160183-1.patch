@@ -1,0 +1,48 @@
+diff --git a/includes/calendar_plugin_style.inc b/includes/calendar_plugin_style.inc
+index 50d1bbf..8d85271 100644
+--- a/includes/calendar_plugin_style.inc
++++ b/includes/calendar_plugin_style.inc
+@@ -265,6 +265,11 @@ class calendar_plugin_style extends views_plugin_style {
+     $this->date_info->style_theme_style = $this->options['theme_style'];
+     $this->date_info->style_max_items = $this->options['max_items'];
+     $this->date_info->style_max_items_behavior = $this->options['max_items_behavior'];
++
++    // Create an array of times to group dates by
++    // However, we need to also store the original option in a different
++    // variable, as it may be required later during theming.
++    $this->date_info->style_groupby_times_original = $this->options['groupby_times'];
+     if (!empty($this->options['groupby_times_custom'])) {
+       $this->date_info->style_groupby_times = explode(',', $this->options['groupby_times_custom']);
+     }
+diff --git a/theme/theme.inc b/theme/theme.inc
+index 5ae7b19..113e1ff 100644
+--- a/theme/theme.inc
++++ b/theme/theme.inc
+@@ -266,11 +266,11 @@ function template_preprocess_calendar_day(&$vars) {
+         $group_time = NULL;
+         $divisor = NULL;
+         if ($display_overlap) {
+-          if ($view->style_options['groupby_times'] == 'half') {
++          if ($view->date_info->style_groupby_times_original == 'half') {
+             $group_time = 30;
+             $divisor = 7.5;
+           }
+-          elseif ($view->style_options['groupby_times'] == 'hour') {
++          elseif ($view->date_info->style_groupby_times_original == 'hour') {
+             $group_time = 60;
+             $divisor = 15;
+           }
+@@ -479,11 +479,11 @@ function template_preprocess_calendar_week(&$vars) {
+           if ($display_overlap) {
+             $group_time = NULL;
+             $divisor = NULL;
+-            if ($view->style_options['groupby_times'] == 'half'){
++            if ($view->date_info->style_groupby_times_original == 'half'){
+               $group_time = 30;
+               $divisor = 7.5;
+             }
+-            elseif ($view->style_options['groupby_times'] == 'hour'){
++            elseif ($view->date_info->style_groupby_times_original == 'hour'){
+               $group_time = 60;
+               $divisor = 15;
+             }
