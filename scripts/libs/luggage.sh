@@ -11,10 +11,6 @@
 # ./scripts/build_luggage_isu.sh
 #
 
-ALIAS="@self"
-
-# Ensure we are at the root of a Drupal site.
-DRUPALROOT=$(drush site-alias $ALIAS --component=root)
 DIRECTORY=$(pwd)
 
 # Get name of directory we are currently in
@@ -22,10 +18,38 @@ DIRECTORY=$(pwd)
 # http://stackoverflow.com/questions/1371261/get-current-directory-name-without-full-path-in-bash-script?answertab=active#tab-top
 BASENAME=${PWD##*/}
 
+# Assign the default alias
+DEFAULT_ALIAS="@self"
+ALIAS=$DEFAULT_ALIAS
+
+OS=`uname`
+
+get_site_identifier() {
+		SITE_IDENTIFIER=$1
+
+		# Ensure alias begins with @
+		if [ "${SITE_IDENTIFIER:0:1}" != '@' ]
+			then
+				SITE_ALIAS="@$SITE_IDENTIFIER"
+		fi
+
+		echo $SITE_IDENTIFIER
+}
+
 init() {
+		# Ensure we are at the root of a Drupal site.
+		DRUPALROOT=$(drush site-alias $ALIAS --component=root)
+
     if [ "$DIRECTORY" != "$DRUPALROOT" ]; then
         echo "Please run $0 from the root of a Drupal site." && exit 1
     fi
+
+		# Conditionally assign the passed in alias
+		if [ -z "$1" ]; then
+			echo 'No alias provided. Using @self'
+		else
+			ALIAS=$1
+		fi
 
     echo "Proceeding with site name -> " $BASENAME
 
@@ -40,7 +64,7 @@ init() {
     else
         DBCREDENTIALS=$DBCREDS
     fi
-    
+
     [ -z "$APACHEUSER" ] && APACHEUSER=apache
 
     # Get submodules defined in .gitmodules
@@ -92,6 +116,13 @@ finish() {
     echo "Your luggage is ready."
     echo ""
 
-    # Provide a one-time login URL
-    drush $ALIAS uli
+		# Provide a one-time login URL
+	  # Open site if running from a Mac and an alias other than the default was
+		# passed in.
+	  if [ "$OS" = 'Darwin' ] && [ "$ALIAS" != "$DEFAULT_ALIAS" ]
+	    then
+	    open `drush $ALIAS uli`
+	  else
+	    drush $ALIAS uli
+	  fi
 }
