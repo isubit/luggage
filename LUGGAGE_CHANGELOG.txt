@@ -2,6 +2,11 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
+Luggage 3.3.0, 2015-11-24
+Drupal 7.41, 2015-10-21
+-------------------------
+- LUGG-592 - Adding luggage_video feature
+
 Luggage 3.2.5, 2015-10-21
 Drupal 7.41, 2015-10-21
 -------------------------
