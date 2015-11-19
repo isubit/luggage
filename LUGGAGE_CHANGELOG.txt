@@ -8,6 +8,7 @@ Drupal 7.41, 2015-10-21
 - LUGG-175 - Added default 404 page to show menus
 - LUGG-335 - Updated calendar module to 7.x-3.5
 - LUGG-572 - Added alpha and beta symbols to the CKEditor special character selection
+- LUGG-589 - Update references of ISUITC to ISUBIT
 - LUGG-592 - Adding luggage_video feature
 - LUGG-603 - Fixed authenticated user unable to create any published content
 
