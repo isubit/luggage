@@ -11,6 +11,7 @@ Drupal 7.41, 2015-10-21
 - LUGG-589 - Update references of ISUITC to ISUBIT
 - LUGG-592 - Adding luggage_video feature
 - LUGG-603 - Fixed authenticated user unable to create any published content
+- LUGG-607 - Video field in events with luggage_events_video
 
 Luggage 3.2.5, 2015-10-21
 Drupal 7.41, 2015-10-21
