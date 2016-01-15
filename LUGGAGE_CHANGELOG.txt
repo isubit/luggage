@@ -2,7 +2,7 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
-Luggage 3.3.0, 2015-11-24
+Luggage 3.3.0, 2016-01-15
 Drupal 7.41, 2015-10-21
 -------------------------
 - LUGG-175 - Added default 404 page to show menus
