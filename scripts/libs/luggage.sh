@@ -81,7 +81,7 @@ finish() {
 
     if (file_exists(\$environment_settings)) {
         require(\$environment_settings);
-    }" | sudo tee -a $DIRECTORY/sites/default/settings.php
+    }" | sudo tee -a $DIRECTORY/sites/default/settings.php > /dev/null
 
     # Check for existence of /var/www/env/settings.env.inc
     if [ ! -e /var/www/env/settings.env.inc ]; then
