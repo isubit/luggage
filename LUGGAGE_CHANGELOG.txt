@@ -8,6 +8,7 @@ Drupal 7.43, 2016-02-24
 - LUGG-525 - Moved suitcase styling from luggage_people to suitcase
 - LUGG-546 - Adding location field to events
 - LUGG-635 - Updated CKEditor library to 4.5.8
+- LUGG-660 - Removed redundant views display on luggage_news
 
 Luggage 3.3.1, 2016-02-24
 Drupal 7.43, 2016-02-24
