@@ -14,7 +14,15 @@
 ALIAS="@self"
 
 # Ensure we are at the root of a Drupal site.
-DRUPALROOT=$(drush site-alias $ALIAS --component=root)
+DRUSHVERSION=$(drush --version --pipe)
+
+if [[ $DRUSHVERSION == "5."* ]]; then
+  DRUPALROOT=$(drush site-alias $ALIAS --component=root)
+else
+  # Drush 6, 7, 8 all support the following syntax.
+  DRUPALROOT=$(drush site-alias $ALIAS --format=csv --fields=root --field-labels=0)
+fi
+
 DIRECTORY=$(pwd)
 
 # Get name of directory we are currently in
