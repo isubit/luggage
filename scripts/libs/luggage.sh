@@ -11,16 +11,15 @@
 # ./scripts/build_luggage_isu.sh
 #
 
-ALIAS="@self"
 
 # Ensure we are at the root of a Drupal site.
 DRUSHVERSION=$(drush --version --pipe)
 
 if [[ $DRUSHVERSION == "5."* ]]; then
-  DRUPALROOT=$(drush site-alias $ALIAS --component=root)
+  DRUPALROOT=$(drush site-alias @self --component=root)
 else
   # Drush 6, 7, 8 all support the following syntax.
-  DRUPALROOT=$(drush site-alias $ALIAS --format=csv --fields=root --field-labels=0)
+  DRUPALROOT=$(drush site-alias @self --format=csv --fields=root --field-labels=0)
 fi
 
 DIRECTORY=$(pwd)
@@ -58,24 +57,24 @@ init() {
 install_site() {
     # Install luggage, all its features and all its dependencies - This should be factored out as a separate function
     # Install Drupal 7 using the minimal profile.
-    drush $ALIAS si minimal -y --db-url=mysql://$DBCREDENTIALS@localhost/$BASENAME --site-name=$BASENAME --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
+    drush si minimal -y --db-url=mysql://$DBCREDENTIALS@localhost/$BASENAME --site-name=$BASENAME --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
 }
 
 install_luggage_features() {
     # Install only the Luggage features you want.
-    #drush -v $ALIAS en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_news_solr luggage_placeholder luggage_people luggage_people_expertise luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
+    #drush -v en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_news_solr luggage_placeholder luggage_people luggage_people_expertise luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
 
     # Install all the Luggage features.
-    drush -v $ALIAS en -y luggage_*
+    drush -v en -y luggage_*
 }
 
 finish() {
     # Revert all the Luggage features.
-    drush $ALIAS fra -y
+    drush fra -y
 
     # Clear all Drupal cache.
-    drush $ALIAS cc all
-    drush $ALIAS cron-run all --cli all > /dev/null 2>&1
+    drush cc all
+    drush cron-run all --cli all > /dev/null 2>&1
 
     # New files directory
     mkdir -p $DIRECTORY/files
@@ -101,5 +100,5 @@ finish() {
     echo ""
 
     # Provide a one-time login URL
-    drush $ALIAS uli
+    drush uli
 }
