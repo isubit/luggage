@@ -65,7 +65,15 @@ install_luggage_features() {
     #drush -v en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_news_solr luggage_placeholder luggage_people luggage_people_expertise luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
 
     # Install all the Luggage features.
-    drush -v en -y luggage_*
+    drush en -y luggage_*
+    
+    if [[ $DRUSHVERSION == "7."* || $DRUSHVERSION == "8."* ]]; then
+      # Drush 8 won't enable a module if it includes a dependency that isn't listed on d.o.
+      # Running again to actually enable the features instead of just getting the dependencies.
+      # See LUGG-680
+      echo "Running drush en again"
+      drush en -y luggage_*
+    fi
 }
 
 finish() {
