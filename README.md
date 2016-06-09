@@ -2,84 +2,67 @@ Luggage
 =========
 [![Build Status](https://travis-ci.org/isubit/luggage.svg?branch=master "Build Status")](http://travis-ci.org/isubit/luggage)
 
-Luggage is a Drupal 7.x platform for building/maintaining academic websites.
+Introduction
+-------------------
+Luggage is a platform for building/maintaining academic websites. The platform is built on Drupal 7 and consists of features that come with configuration. The goal is to empower web developers to quickly leverage common use cases so that sites can be up and running quickly but maintain the ability to customize features or add additional features. [Contributions](http://luggagedocs.info/contributing) are welcome!
 
-  - Build Luggage from script or Add/Merge Luggage to your current Drupal 7.x project.
-  - Enable the features you would like to use.
-  - Magic.
+Some of the features found in Luggage are:
 
-Luggage is a managed stable release of Drupal 7.x coupled with several features that together make a platform. The platform can be applied at any time:
+* Friendly, intuitive URLs
+* WYSIWYG CKEditor configured
+* Content types and views for events, news, people profiles, projects/grants, resources, and more...
+* Faceted search provided by Apache Solr
+* All content is tagged and categorized
+* Great for sites with lots of content. Prefers a search-based architecture rather than a hierarchal menu architecture
+* Theme-independent
 
-> The overriding design goal for the Luggage Platform are discrete fully functional features that are independent of the platform and any Drupal theme.
-> When the individual features are combined together a full-featured academic platform emerges.
-> Luggage is not an install profile nor a distribution. It can be applied to any Drupal 7 project at any time.
-> It can also be removed as simply.
+For a quick overview, see [Luggage at a Glance](http://www.biology-it.iastate.edu/luggage_doc/luggage-glance).
 
-Is Luggage Right For You?
--------------------------
-An Iowa State University flavor of Luggage, [Luggage ISU][] is available for those intending to build and deploy at ISU.
+The overriding design goal for the Luggage platform is to provide discrete features that are independent of any Drupal theme. When the individual features are combined together a full-featured academic platform emerges.
 
-If this is not you, then Luggage is right for you!
+**Other forks worth looking at:**
 
-Version
+* [Luggage ISU](http://github.com/isubit/luggage_isu) - Downstream fork with theme and configuration for Iowa State University.
+* Your Fork - Since Luggage is generic and has no theme, you may want to create your own fork for your organization.
+
+More about Luggage can be found at http://luggagedocs.info
+
+Requirements
+-----------------
+* [Drush](http://www.drush.org/) 5.9 or later
+* Git 1.8.5.2 or later
+* [Drupal 7.x Requirements](https://www.drupal.org/requirements)
+* Intermediate knowledge of Drupal site building and administration
+* [Apache Solr](http://lucene.apache.org/solr/) (optional)
+* Windows environment unsupported
+
+Installation
+--------------
+* In your web server's document root: `git clone git@github.com:isubit/luggage.git` 
+* `cd luggage`
+* `bash scripts/build_luggage.sh` It may be helpful to define bash environment variables for `$APACHEUSER` and `$DBCREDS`. It will assume your database is at localhost unless you have defined a different host in `$DBHOST`.
+* If the installation script is successful, it will provide you with a one-time log in link for the admin user.
+
+More verbose instructions can be found at http://luggagedocs.info/installing-luggage-scratch
+
+Versions
 ----
 Development of Luggage takes place on the 'development' branch in Github. Pull requests should be made against the 'development' branch.
 
 Releases take place on the 'master' branch. 
 
-The 2.x.x branch of Luggage is being maintained for security fixes only.
-
-Upgrading from Luggage 2.x.x to 3.x.x
--------------------------------------
-1. Use git to upgrade your code
-2. Update your git submodules
-
-Technology
------------
-
-Luggage uses a number of open source projects to work properly:
-
-* [Drupal][] - Drupal is an open source content management platform powering millions of websites and applications.
-* [Drush][] - a command-line shell and scripting interface for Drupal
-* [Ckeditor][] - HTML text editor designed to simplify web content creation
-* [Flexslider2][] - The best responsive slider. Period.
-* [Apache Solr][] - search platform.
-
-Installation
---------------
-
-Below is the brief run-down on how to install Luggage. The full installation documentation can be found [here](http://www.biology-it.iastate.edu/luggage_doc/installing-luggage-scratch#).
-
-#####Assumptions:
-* Drush is installed
-* Git is installed
-
-Clone this repo's latest release into the root directory that your web server points to.
-Releases: https://github.com/isubit/luggage/releases
-
-
-Run the build script found within the *scripts* directory:
-```
-source ./scripts/build_luggage.sh
-```
-
-The last line of output from the script, if successful, will be a root user one-time login link. Copy and append everything from "/user" and on, to the end of the luggage installation url in a web browser of your choice. Typically, the final link will look something like this:
-``` 
-http://localhost/luggage/user/reset/1/1409061179/KjbHsr6O7FRaz-__WShbgWuPwKHKrXHy6QGV_AQu02E/login
-```
-
-You are now logged in as the root user, allowing you to develop using the power of Luggage! Enjoy!
+The 2.x.x branches and lower of Luggage are no longer supported.
 
 Contributing
 ----
 
-Refer to the [Luggage git architecture](http://www.biology-it.iastate.edu/luggage_doc/comprehensive-code-flow-management)
+Refer to the [Luggage git architecture](http://www.biology-it.iastate.edu/luggage_doc/comprehensive-code-flow-management). Pull requests against the development branch are encouraged.
 
 Refer to the [contribution documentation](http://www.biology-it.iastate.edu/luggage_doc/luggage-development)
 
 Troubleshooting
 ----
-Read/Search [Luggage Documentation][]
+Read or search http://luggagedocs.info
 
 Join us on IRC FreeNode @ #luggage
 * Need help setting up IRC? https://www.drupal.org/irc/setting-up
@@ -89,19 +72,7 @@ Travis-CI - https://travis-ci.org/isubit/luggage
 
 License
 ----
-
-[GPLv2][]
+[GPLv2](http://www.gnu.org/licenses/gpl-2.0.html)
 
 
 **Open Source | Open Access | Open Mind**
-
-[Drupal]:http://drupal.org/
-[Drush]:https://github.com/drush-ops/drush
-[Ckeditor]:http://ckeditor.com/
-[Flexslider2]:http://flexslider.woothemes.com/
-[Apache Solr]:http://lucene.apache.org/solr/
-[GPLv2]:http://www.gnu.org/licenses/gpl-2.0.html
-[Travis]:https://travis-ci.org/isubit/luggage.svg?branch=master
-[Luggage ISU]:https://github.com/isubit/luggage_isu
-[Luggage Documentation]:http://www.biology-it.iastate.edu/luggage_doc/
-
