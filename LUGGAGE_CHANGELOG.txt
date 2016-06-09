@@ -2,14 +2,26 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
-Luggage 3.3.2, 2016-04-07
+Luggage 3.4.0, 2016-06-10
 Drupal 7.43, 2016-02-24
 -------------------------
+- LUGG-114 - People names now use HTML entities instead of displaying them
+- LUGG-227 - Anonymous users no longer get prompted to add a new resource
+- LUGG-384 - Updated README.md
+- LUGG-457 - Disabled comments on all content types by default
 - LUGG-525 - Moved suitcase styling from luggage_people to suitcase
 - LUGG-546 - Adding location field to events
 - LUGG-635 - Updated CKEditor library to 4.5.8
 - LUGG-636 - Commas separate areas of expertise in teaser and search results for people
+- LUGG-654 - Read More configuration updated based on new release of read_more module
 - LUGG-660 - Removed redundant views display on luggage_news
+- LUGG-680 - Build script supports drush 8
+- LUGG-713 - Update permission settings based on new release of scheduler module
+- LUGG-714 - Site index now requires view content permission
+- LUGG-720 - Removed unused CSS file from luggage_roles
+- LUGG-724 - Support for Tugboat.qa
+- LUGG-725 - Build script uses bash instead of sh
+- LUGG-726 - Build script supports defining $DBHOST for MySQL hostname
 
 Luggage 3.3.1, 2016-02-24
 Drupal 7.43, 2016-02-24
