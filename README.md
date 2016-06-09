@@ -10,8 +10,8 @@ Some of the features found in Luggage are:
 
 * Friendly, intuitive URLs
 * WYSIWYG CKEditor configured
-* Content types and views for Events, news, people profiles, projects/grants, resources, and more...
-* Apache Solr Search
+* Content types and views for events, news, people profiles, projects/grants, resources, and more...
+* Faceted search provided by Apache Solr
 * All content is tagged and categorized
 * Great for sites with lots of content. Prefers a search-based architecture rather than a hierarchal menu architecture
 * Theme-independent
