@@ -4,7 +4,7 @@ Luggage
 
 Introduction
 -------------------
-Luggage is a platform for building/maintaining academic websites. The platform is built on Drupal 7 and consists of features that come with configuration. The goal is to quickly leverage common use cases so that web developers can be empowered to get sites up and running quickly but maintain the ability to customize features or add additional features. [Contributions](http://luggagedocs.info/contributing) are welcome!
+Luggage is a platform for building/maintaining academic websites. The platform is built on Drupal 7 and consists of features that come with configuration. The goal is to empower web developers to quickly leverage common use cases so that sites can be up and running quickly but maintain the ability to customize features or add additional features. [Contributions](http://luggagedocs.info/contributing) are welcome!
 
 Some of the features found in Luggage are:
 
