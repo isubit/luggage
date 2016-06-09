@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Assumptions:
 # ===========
@@ -36,6 +36,10 @@ init() {
 
     echo "Proceeding with site name -> " $BASENAME
 
+    if [ -z "$DBHOST"]; then
+      DBHOST=localhost
+    fi
+
     if [ -z "$DBCREDS" ]; then
         printf "DB username: "
         read username
@@ -57,7 +61,7 @@ init() {
 install_site() {
     # Install luggage, all its features and all its dependencies - This should be factored out as a separate function
     # Install Drupal 7 using the minimal profile.
-    drush si minimal -y --db-url=mysql://$DBCREDENTIALS@localhost/$BASENAME --site-name=$BASENAME --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
+    drush si minimal -y --db-url=mysql://$DBCREDENTIALS@$DBHOST/$BASENAME --site-name=$BASENAME --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
 }
 
 install_luggage_features() {
