@@ -74,6 +74,7 @@ install_luggage_features() {
     drush en -y luggage_indicator
     drush en -y luggage_news
     drush en -y luggage_people
+    drush en -y luggage_people_expertise
     drush en -y luggage_placeholder
     drush en -y luggage_projects
     drush en -y luggage_resources
