@@ -78,11 +78,18 @@ install_luggage_features() {
     drush en -y luggage_projects
     drush en -y luggage_resources
     drush en -y luggage_seo
-    drush en -y luggage_solr
     drush en -y luggage_ui
     drush en -y luggage_vars
     drush en -y luggage_video
+    drush en -y luggage_events_video
     # drush en -y luggage_biblio
+    drush en -y luggage_solr
+    drush en -y luggage_events_solr
+    drush en -y luggage_news_solr
+    drush en -y luggage_people_solr
+    drush en -y luggage_resources_solr
+    drush en -y luggage_roles_solr
+    drush en -y luggage_video_solr
     
     if [[ $DRUSHVERSION == "7."* || $DRUSHVERSION == "8."* ]]; then
       # Drush 8 won't enable a module if it includes a dependency that isn't listed on d.o.
