@@ -64,7 +64,7 @@ install_site() {
 }
 
 install_luggage_features() {
-    # Install default the Luggage features. Comment any you wish not to install.
+    # Install default Luggage features. Comment any you wish not to install.
     drush en -y luggage_core
     drush en -y luggage_contrib
     drush en -y luggage_ckeditor
