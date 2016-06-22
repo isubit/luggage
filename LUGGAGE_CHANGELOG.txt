@@ -3,7 +3,7 @@ How to read this changelog:
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
 Luggage 3.4.0, 2016-06-10
-Drupal 7.43, 2016-02-24
+Drupal 7.44, 2016-06-15
 -------------------------
 - LUGG-114 - People names now use HTML entities instead of displaying them
 - LUGG-227 - Anonymous users no longer get prompted to add a new resource
