@@ -59,24 +59,47 @@ init() {
 }
 
 install_site() {
-    # Install luggage, all its features and all its dependencies - This should be factored out as a separate function
     # Install Drupal 7 using the minimal profile.
     drush si minimal -y --db-url=mysql://$DBCREDENTIALS@$DBHOST/$BASENAME --site-name=$BASENAME --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
 }
 
 install_luggage_features() {
-    # Install only the Luggage features you want.
-    #drush -v en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_news_solr luggage_placeholder luggage_people luggage_people_expertise luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
-
-    # Install all the Luggage features.
-    drush en -y luggage_*
+    # Install default Luggage features. Comment any you wish not to install.
+    drush en -y luggage_core
+    drush en -y luggage_contrib
+    drush en -y luggage_ckeditor
+    drush en -y luggage_roles
+    drush en -y luggage_announcements
+    drush en -y luggage_events
+    drush en -y luggage_indicator
+    drush en -y luggage_news
+    drush en -y luggage_people
+    drush en -y luggage_people_expertise
+    drush en -y luggage_placeholder
+    drush en -y luggage_projects
+    drush en -y luggage_resources
+    drush en -y luggage_seo
+    drush en -y luggage_ui
+    drush en -y luggage_vars
+    drush en -y luggage_video
+    drush en -y luggage_events_video
+    # drush en -y luggage_biblio
+    drush en -y luggage_solr
+    drush en -y luggage_events_solr
+    drush en -y luggage_news_solr
+    drush en -y luggage_people_solr
+    drush en -y luggage_resources_solr
+    drush en -y luggage_roles_solr
+    drush en -y luggage_video_solr
     
     if [[ $DRUSHVERSION == "7."* || $DRUSHVERSION == "8."* ]]; then
       # Drush 8 won't enable a module if it includes a dependency that isn't listed on d.o.
       # Running again to actually enable the features instead of just getting the dependencies.
       # See LUGG-680
-      echo "Running drush en again"
-      drush en -y luggage_*
+      if [ -z $1  ]; then
+        echo "Running drush en again"
+        install_luggage_features "second_run"
+      fi
     fi
 }
 

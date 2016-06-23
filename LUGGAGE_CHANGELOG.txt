@@ -3,7 +3,7 @@ How to read this changelog:
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
 Luggage 3.4.0, 2016-06-10
-Drupal 7.43, 2016-02-24
+Drupal 7.44, 2016-06-15
 -------------------------
 - LUGG-114 - People names now use HTML entities instead of displaying them
 - LUGG-227 - Anonymous users no longer get prompted to add a new resource
@@ -23,6 +23,11 @@ Drupal 7.43, 2016-02-24
 - LUGG-725 - Build script uses bash instead of sh
 - LUGG-726 - Build script supports defining $DBHOST for MySQL hostname
 - LUGG-729 - Disable comments on page and people content types
+
+Luggage 3.3.2, 2016-06-15
+Drupal 7.44, 2016-06-15
+-------------------------
+- LUGG-731 - Drupal 7.44 SA-CORE-2016-002
 
 Luggage 3.3.1, 2016-02-24
 Drupal 7.43, 2016-02-24
