@@ -2,6 +2,23 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
 
+Luggage 3.4.1, 2016-08-19
+Drupal 7.50, 2016-07-07
+-------------------------
+- LUGG-348 - Added ability to merge cells in CKEditor
+- LUGG-357 - Removed non-functional 'Reset to alphabetical' button from taxonomy configuration
+- LUGG-436 - Added transliteration module dependency
+- LUGG-658 - luggage_resources now has better view format
+- LUGG-716 - Updated CKEditor library to 4.5.10
+- LUGG-734 - luggage_resources now supports plugins
+- LUGG-737 - Updated luggage_ckeditor README
+- LUGG-755 - Fixed erroneous help text on link fields
+- LUGG-760 - Added README to luggage_resources
+- LUGG-762 - Drupal 7.50
+- LUGG-765 - Fixed luggage.sh referring to luggage_isu.sh
+- LUGG-770 - Fixed luggage_announcements and luggage_biblio always overridden
+- LUGG-773 - Removed unused luggage_resource..inc
+
 Luggage 3.4.0, 2016-06-10
 Drupal 7.44, 2016-06-15
 -------------------------
