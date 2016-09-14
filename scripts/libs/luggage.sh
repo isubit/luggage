@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Assumptions:
 # ===========
@@ -6,15 +6,22 @@
 # - Git 1.8.5.2 or greater
 # - Execution from a shell in the webroot directory.
 #
-# git clone git@github.com:isubit/luggage_isu.git
-# cd luggage_isu
-# ./scripts/build_luggage_isu.sh
+# git clone git@github.com:isubit/luggage.git
+# cd luggage
+# ./scripts/build_luggage.sh
 #
 
-ALIAS="@self"
 
 # Ensure we are at the root of a Drupal site.
-DRUPALROOT=$(drush site-alias $ALIAS --component=root)
+DRUSHVERSION=$(drush --version --pipe)
+
+if [[ $DRUSHVERSION == "5."* ]]; then
+  DRUPALROOT=$(drush site-alias @self --component=root)
+else
+  # Drush 6, 7, 8 all support the following syntax.
+  DRUPALROOT=$(drush site-alias @self --format=csv --fields=root --field-labels=0)
+fi
+
 DIRECTORY=$(pwd)
 
 # Get name of directory we are currently in
@@ -28,6 +35,10 @@ init() {
     fi
 
     echo "Proceeding with site name -> " $BASENAME
+
+    if [ -z "$DBHOST"]; then
+      DBHOST=localhost
+    fi
 
     if [ -z "$DBCREDS" ]; then
         printf "DB username: "
@@ -48,26 +59,57 @@ init() {
 }
 
 install_site() {
-    # Install luggage, all its features and all its dependencies - This should be factored out as a separate function
     # Install Drupal 7 using the minimal profile.
-    drush $ALIAS si minimal -y --db-url=mysql://$DBCREDENTIALS@localhost/$BASENAME --site-name=$BASENAME --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
+    drush si minimal -y --db-url=mysql://$DBCREDENTIALS@$DBHOST/$BASENAME --site-name=$BASENAME --account-name=adminn install_configure_form.update_status_module='array(FALSE,FALSE)'
 }
 
 install_luggage_features() {
-    # Install only the Luggage features you want.
-    #drush -v $ALIAS en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_news_solr luggage_placeholder luggage_people luggage_people_expertise luggage_people_solr luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars
-
-    # Install all the Luggage features.
-    drush -v $ALIAS en -y luggage_*
+    # Install default Luggage features. Comment any you wish not to install.
+    drush en -y luggage_core
+    drush en -y luggage_contrib
+    drush en -y luggage_ckeditor
+    drush en -y luggage_roles
+    drush en -y luggage_announcements
+    drush en -y luggage_events
+    drush en -y luggage_indicator
+    drush en -y luggage_news
+    drush en -y luggage_people
+    drush en -y luggage_people_expertise
+    drush en -y luggage_placeholder
+    drush en -y luggage_projects
+    drush en -y luggage_resources
+    drush en -y luggage_seo
+    drush en -y luggage_ui
+    drush en -y luggage_vars
+    drush en -y luggage_video
+    drush en -y luggage_events_video
+    # drush en -y luggage_biblio
+    drush en -y luggage_solr
+    drush en -y luggage_events_solr
+    drush en -y luggage_news_solr
+    drush en -y luggage_people_solr
+    drush en -y luggage_resources_solr
+    drush en -y luggage_roles_solr
+    drush en -y luggage_video_solr
+    
+    if [[ $DRUSHVERSION == "7."* || $DRUSHVERSION == "8."* ]]; then
+      # Drush 8 won't enable a module if it includes a dependency that isn't listed on d.o.
+      # Running again to actually enable the features instead of just getting the dependencies.
+      # See LUGG-680
+      if [ -z $1  ]; then
+        echo "Running drush en again"
+        install_luggage_features "second_run"
+      fi
+    fi
 }
 
 finish() {
     # Revert all the Luggage features.
-    drush $ALIAS fra -y
+    drush fra -y
 
     # Clear all Drupal cache.
-    drush $ALIAS cc all
-    drush $ALIAS cron-run all --cli all > /dev/null 2>&1
+    drush cc all
+    drush cron-run all --cli all > /dev/null 2>&1
 
     # New files directory
     mkdir -p $DIRECTORY/files
@@ -93,5 +135,5 @@ finish() {
     echo ""
 
     # Provide a one-time login URL
-    drush $ALIAS uli
+    drush uli
 }
