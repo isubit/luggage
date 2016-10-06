@@ -36,7 +36,7 @@ init() {
 
     echo "Proceeding with site name -> " $BASENAME
 
-    if [ -z "$DBHOST"]; then
+    if [ -z "$DBHOST" ]; then
       DBHOST=localhost
     fi
 
