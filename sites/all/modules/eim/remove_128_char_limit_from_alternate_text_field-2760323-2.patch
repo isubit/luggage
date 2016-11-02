@@ -1,0 +1,32 @@
+diff --git a/README.txt b/README.txt
+index 2c80b8b..ce9aa8f 100644
+--- a/README.txt
++++ b/README.txt
+@@ -5,7 +5,6 @@ Extended functionalities
+   - Adds checkboxes for the fields of image editing forms by content type.
+     - Alt field required
+     - Title field required
+-  - Sets the Alt field maxlength value to 128 for editing forms of nodes.
+ 
+ EIM was written by Siegfried Neumann aka Quiptime.
+ 
+diff --git a/eim.module b/eim.module
+index 912266b..d4d8bff 100644
+--- a/eim.module
++++ b/eim.module
+@@ -7,7 +7,6 @@
+  *   - Add checkboxes to the content types image field edit form.
+  *     - "Alt field required"
+  *     - "Title field required"
+- *   - Set the alt text field maxlength value on node edit forms to 128.
+  */
+ 
+ /**
+@@ -93,7 +92,5 @@ function eim_imagefield_widget_process($element, &$form_state, $form) {
+     $element['title']['#required'] = TRUE;
+   }
+   
+-  $element['alt']['#maxlength'] = 128;
+-  
+   return $element;
+ }
