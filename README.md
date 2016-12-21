@@ -70,6 +70,14 @@ Join us on IRC FreeNode @ #luggage
 Travis-CI - https://travis-ci.org/isubit/luggage
 * Reports into IRC FreeNode @  ##luggage
 
+Thanks
+----
+Thanks to the following companies for providing sponsorship through services and products used to build and improve Luggage:
+- [BrowserStack](https://www.browserstack.com) for interface testing across desktop and mobile browsers.
+- [JetBrains](https://www.jetbrains.com/phpstorm/) for use of the PHPStorm IDE for development.
+- [GitHub](https://github.com) for collaboration and code management tools.
+- [Travis-CI](https://travis-ci.org/) for continuous automated testing.
+
 License
 ----
 [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html)
