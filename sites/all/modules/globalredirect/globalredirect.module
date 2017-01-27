@@ -137,7 +137,7 @@ function globalredirect_init() {
       if (isset($options['query'])) {
         $options['query'] = array_merge($options['query'], $term_path['options']['query']);          
       }
-      else {
+      elseif (isset($term_path['options']['query'])) {
         $options['query'] = $term_path['options']['query'];
       }
     }
