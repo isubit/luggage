@@ -9,7 +9,7 @@ Drupal 7.54, 2016-02-01
 - LUGG-120 - Fixed Linkchecker to report on luggage content types
 - LUGG-459 - Fixed content editor should access to unpublished content (Requires adding view_unpublished)
 - LUGG-520 - Fixed text alignment in CKEditor table cells
-- LUGG-529 - Added consistancies across content types
+- LUGG-529 - Added consistencies across content types
 - LUGG-551 - Added alternate URL redirect for projects
 - LUGG-600 - Added indent and outdent buttons to CKEditor
 - LUGG-654 - Hide Read More links if body field is empty
@@ -26,8 +26,8 @@ Drupal 7.54, 2016-02-01
 - LUGG-847 - Fixed block CSS targeting in luggage_people
 - LUGG-877 - Removed redundant code from luggage_projects
 - LUGG-878 - Fix alphabetical ordering on site index page
-- LUGG-882 - Added aditional thanks in README.md
-- LUGG-887 - Added cagetory menu configuration to luggage_roles from suitcase_config
+- LUGG-882 - Added additional thanks in README.md
+- LUGG-887 - Added category menu configuration to luggage_roles from suitcase_config
 - LUGG-895 - Added whitelisted class attributes to CKEditor
 - LUGG-900 - Improved upcoming events to now be defined by end time instead of start time
 - LUGG-907 - Added luggage_seo README
