@@ -7,7 +7,6 @@ Drupal 7.54, 2016-02-01
 -------------------------
 - #44 - Fixed missing ']' in build script
 - LUGG-120 - Fixed Linkchecker to report on luggage content types
-- LUGG-459 - Fixed content editor should access to unpublished content (Requires adding view_unpublished)
 - LUGG-520 - Fixed text alignment in CKEditor table cells
 - LUGG-529 - Added consistencies across content types
 - LUGG-551 - Added alternate URL redirect for projects
