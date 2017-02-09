@@ -1,6 +1,6 @@
 How to read this changelog:
 
-The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to Github issue numbers.
+The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to GitHub issue numbers.
 
 Luggage 3.5.0, 2017-02-06
 Drupal 7.54, 2016-02-01
@@ -13,7 +13,7 @@ Drupal 7.54, 2016-02-01
 - LUGG-600 - Added indent and outdent buttons to CKEditor
 - LUGG-654 - Hide Read More links if body field is empty
 - LUGG-732 - Added Drush 8 support in travis config
-- LUGG-752 - Improved accessibility for announcemnt banners
+- LUGG-752 - Improved accessibility for announcement banners
 - LUGG-769 - Added some default grid styling available for views
 - LUGG-818 - Added alt text to luggage_resources screenshots
 - LUGG-819 - Added alt text to publication images
