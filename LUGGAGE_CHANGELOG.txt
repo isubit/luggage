@@ -6,11 +6,11 @@ Luggage 3.5.1, 2017-03-22
 Drupal 7.54, 2016-02-01
 -------------------------
 - LUGG-355 - Added link to Luggage documentation to admin menu
-- LUGG-417 - Fixed content type Indicator colliding with long node titles
+- LUGG-417 - Fixed Content Type Indicator colliding with long node titles
 - LUGG-548 - Added alternate URL to news items
 - LUGG-566 - Hid alternate URL and announcement type fields from node view on announcements
-- LUGG-640 - Updated display of search results
-- LUGG-952 - Made people name fields display shorter when editing
+- LUGG-640 - Removed category and tag from individual search result display
+- LUGG-952 - Shortened first and last name field edit form display when editing People
 - LUGG-963 - Removed luggage 404 page from navigation menu
 
 Luggage 3.5.0, 2017-02-06
