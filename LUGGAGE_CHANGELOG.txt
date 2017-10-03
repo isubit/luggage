@@ -6,21 +6,21 @@ Luggage 3.5.3, 2017-10-03
 Drupal 7.56, 2017-06-21
 -------------------------
 - LUGG-540  - Improved content type descriptions
-- LUGG-660  - Fixed News view has two identical block displays
+- LUGG-660  - News view no longer has two identical block displays
 - LUGG-682  - Renamed role "Q&A moderator" to "QA Moderator"
-- LUGG-863  - Added publish/un-publish permissions to video content type
+- LUGG-863  - Added publish/unpublish permissions to video content type
 - LUGG-941  - Added token_filter as dependency for luggage_ckeditor
 - LUGG-982  - Updated display of content type indicators
 - LUGG-986  - Removed green URLs on resources
 - LUGG-988  - Fixed rendering issues on projects view
-- LUGG-993  - Fixed Metatag descriptions to be included again
-- LUGG-994  - Fixed metatag keywords to be included again
-- LUGG-999  - Updated luggage grid to use Flexbox CSS instead of Javascript
-- LUGG-1003 - Added view mode for frontpage
-- LUGG-1004 - Updated tags and teasers to not include categories and tags
+- LUGG-993  - Metatag descriptions are now correctly included again
+- LUGG-994  - Metatag keywords are now correctly included again
+- LUGG-999  - Updated Luggage grid to use Flexbox CSS instead of JavaScript
+- LUGG-1003 - Added view mode for front page
+- LUGG-1004 - Teasers no longer display categories and tags
 - LUGG-1006 - Fixed news views to display summary/trimmed instead of trimmed body
 - LUGG-1011 - Updated "Announcement" content type to be called "Announcement Banner"
-- LUGG-1012 - Flexslider will only display play/pause buttons when number of items greater than 1
+- LUGG-1012 - Flexslider will only display play/pause buttons when number of items greater than one
 - LUGG-1017 - Fixed display of images displayed with news teasers
 
 Luggage 3.5.2, 2017-06-21
