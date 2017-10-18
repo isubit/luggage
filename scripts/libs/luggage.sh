@@ -6,7 +6,7 @@
 # - Git 1.8.5.2 or greater
 # - Execution from a shell in the webroot directory.
 #
-# git clone git@github.com:isubit/luggage.git
+# git clone https://github.com/isubit/luggage.git
 # cd luggage
 # ./scripts/build_luggage.sh
 #
