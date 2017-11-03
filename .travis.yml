@@ -13,53 +13,43 @@ matrix:
 git:
   submodules: false
 
-env: DBCREDS=root
+env:
+  global:
+    - DBCREDS=root
+    # Install composer binaries into local bin directory.
+    # see: http://www.drush.org/en/master/install-alternative/#install-a-global-drush-via-composer
+    - COMPOSER_BIN_DIR="$HOME/bin"
+    - PATH="$COMPOSER_BIN_DIR:$PATH"
 
 # whitelist
 branches:
   only:
     - master
     - release
-  
+
+before_install:
+  - sudo apt-get update > /dev/null
+  - composer self-update
+  - mkdir -p "$COMPOSER_BIN_DIR"
+
+install:
+  # install php packages required for running a web server from drush on php 5.3
+  - sudo apt-get install -y --force-yes php5-cgi php5-mysql
+
+  # install drush globally
+  - composer global require drush/drush:8.*
+
 before_script:
+
+  - echo 'sendmail_path="/bin/true"' | tee -a "$(php --ini | grep "Loaded Configuration" | awk '{print $4}')"
+  
   # Use sed to replace the SSH URL with the public URL, then initialize
   # submodules before_install:
   - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --recursive
   
-  - composer self-update
-  - export PATH="$HOME/.composer/vendor/bin:$PATH"
-  - composer global require drush/drush:8.*
-  - phpenv rehash
-  # stubbing sendmail path with true to prevent delivery errors
-  - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-
-# Install php packages required for running a web server from drush on php 5.3
-  - sudo apt-get update > /dev/null
-  - sudo apt-get install -y --force-yes php5-cgi php5-mysql
-
-# # Create new site
-#   - mysql -e 'create database luggage;'
-  
-# #  - php -d sendmail_path=`which true`
-#   - drush si testing -y --db-url=mysql://travis@localhost/luggage --site-name=luggage --account-name=root install_configure_form.update_status_module='array(FALSE,FALSE)'
-#   - drush --yes en simpletest
-  
-# # Install Omega and Suitcase
-#   - drush en -y suitcase
-#   - drush vset theme_default suitcase
-
-# # Install all the Luggage features.
-#   - drush -v en -y luggage_announcements luggage_biblio luggage_ckeditor luggage_contrib luggage_core luggage_events luggage_events_solr luggage_indicator luggage_news luggage_people luggage_people_solr luggage_placeholder luggage_projects luggage_resources luggage_resources_solr luggage_roles luggage_roles_solr luggage_seo luggage_solr luggage_ui luggage_vars suitcase_config suitcase_frontpanel
-#   - drush fra -y
-#   - drush cc all --yes
-#   - drush runserver --server=builtin 8080 &
-#   - sleep 4
-#   - drush vset --yes simpletest_verbose FALSE
-
 script:
   - bash scripts/build_luggage.sh
-  # - drush test-run 'luggage' --debug --uri=http://127.0.0.1:8080
   
 after_script:
   - drush runserver --server=builtin 8080 &
