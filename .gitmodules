@@ -67,3 +67,6 @@ url=git@github.com:isubit/luggage_placeholder.git
 [submodule "sites/all/modules/luggage/luggage_bean_menu"]
 	path = sites/all/modules/luggage/luggage_bean_menu
 	url = git@github.com:isubit/luggage_bean_menu.git
+[submodule "sites/all/modules/luggage/luggage_bean_hero_ex"]
+	path = sites/all/modules/luggage/luggage_bean_hero_ex
+	url = git@github.com:isubit/luggage_bean_hero_ex.git
