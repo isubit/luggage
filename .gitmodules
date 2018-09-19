@@ -58,3 +58,15 @@ url=git@github.com:isubit/luggage_placeholder.git
 [submodule "sites/all/modules/luggage/luggage_video"]
 	path = sites/all/modules/luggage/luggage_video
 	url = git@github.com:isubit/luggage_video.git
+[submodule "sites/all/modules/luggage/luggage_bean_card"]
+	path = sites/all/modules/luggage/luggage_bean_card
+	url = git@github.com:isubit/luggage_bean_card.git
+[submodule "sites/all/modules/luggage/luggage_bean_hero"]
+	path = sites/all/modules/luggage/luggage_bean_hero
+	url = git@github.com:isubit/luggage_bean_hero.git
+[submodule "sites/all/modules/luggage/luggage_bean_menu"]
+	path = sites/all/modules/luggage/luggage_bean_menu
+	url = git@github.com:isubit/luggage_bean_menu.git
+[submodule "sites/all/modules/luggage/luggage_bean_hero_ex"]
+	path = sites/all/modules/luggage/luggage_bean_hero_ex
+	url = git@github.com:isubit/luggage_bean_hero_ex.git

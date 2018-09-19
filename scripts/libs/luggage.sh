@@ -51,7 +51,7 @@ init() {
     else
         DBCREDENTIALS=$DBCREDS
     fi
-    
+
     [ -z "$APACHEUSER" ] && APACHEUSER=apache
 
     # Get submodules defined in .gitmodules
@@ -91,7 +91,9 @@ install_luggage_features() {
     drush en -y luggage_resources_solr
     drush en -y luggage_roles_solr
     drush en -y luggage_video_solr
-    
+    drush en -y luggage_bean_card
+    drush en -y luggage_bean_hero
+
     if [[ $DRUSHVERSION == "7."* || $DRUSHVERSION == "8."* ]]; then
       # Drush 8 won't enable a module if it includes a dependency that isn't listed on d.o.
       # Running again to actually enable the features instead of just getting the dependencies.
