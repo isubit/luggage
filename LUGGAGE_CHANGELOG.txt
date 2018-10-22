@@ -2,6 +2,36 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to GitHub issue numbers.
 
+Luggage 3.6.0, 2018-10-23
+Drupal 7.60, 2018-10-18
+-------------------------
+- luggage_people travis.yml update
+- BBMB-2 - Expertise grid updated
+- LUGG-437 - Template file discovery updates
+- LUGG-659 - Events with alternate URL
+- LUGG-776 - Video transcript displayed by default
+- LUGG-856 - Required image alt (includes patched eim module)
+- LUGG-974 - People sorted by last name, THEN first name (for multiple people with same last name)
+- LUGG-997 - Display first image on news views
+- LUGG-1025 - Added block display for projects
+- LUGG-1026 - Added module_filter module dependency
+- LUGG-1047 - Video needs title attribute
+- LUGG-1066 - Accessibility: Site index is now a Nav element
+- LUGG-1068 - Fix months in year view
+- LUGG-1077 - Accessibility improvements to events pager
+- LUGG-1078 - Accessibility: WYSIWYG HTML is used to format content
+- LUGG-1083 - Fix Calendar view has duplicate id attributes
+- LUGG-1091 - Update CKEditor module and library
+- LUGG-1096 - Events alternate url on frontpage view
+- LUGG-1097 - Turn off linkchecker edits
+- LUGG-1098 - Don't require title attributes on links
+- LUGG-1099 - SEO checker on for all content type
+- LUGG-1100 - DrupalCore inconsistencies in info files
+- LUGG-1101 - Announcement banners bigger to support hero and hero ex
+- LUGG-1110 - OpenGraph on news (facebook thumbnails, etc)
+- LUGG-1121 - Adding beans card hero and menu
+- LUGG-1123 - Increase timeout for screenshot capture
+
 Luggage 3.5.8, 2018-10-17
 Drupal 7.60, 2018-10-17
 -------------------------
