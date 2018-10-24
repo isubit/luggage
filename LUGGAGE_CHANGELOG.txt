@@ -29,6 +29,7 @@ Drupal 7.60, 2018-10-18
 - LUGG-1100 - DrupalCore inconsistencies in info files
 - LUGG-1101 - Announcement banners bigger to support hero and hero ex
 - LUGG-1110 - OpenGraph on news (facebook thumbnails, etc)
+- LUGG-1118 - Added exif_orientation
 - LUGG-1121 - Adding beans card hero and menu
 - LUGG-1123 - Increase timeout for screenshot capture
 
