@@ -2,6 +2,11 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to GitHub issue numbers.
 
+Luggage 3.6.5, 2019-03-20
+Drupal 7.65, 2019-03-20
+-------------------------
+- LUGG-1182 - Drupal 7.65 SA-CORE-2019-004
+
 Luggage 3.6.4, 2019-01-17
 Drupal 7.63, 2019-01-16
 -------------------------
