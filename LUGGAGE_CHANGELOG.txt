@@ -2,6 +2,17 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to GitHub issue numbers.
 
+Luggage 3.6.8, 2019-08-01
+Drupal 7.67, 2019-05-08
+-------------------------
+- LUGG-1127 - Fixed issues where beans couldn't be edited
+- LUGG-1145 - Fixed issue when no image was supplied for overlay card
+- LUGG-1055 - Content Editors can now edit beans
+- LUGG-1159 - Added .info file to luggage_bean_hero
+- LUGG-1160 - Added luggage_bean_video submodule
+- LUGG-1165 - Added ARIA roles to Drupal messages
+- LUGG-1180 - Beans have better color contrast
+
 Luggage 3.6.7, 2019-05-08
 Drupal 7.67, 2019-05-08
 -------------------------
