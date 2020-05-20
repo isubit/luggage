@@ -2,6 +2,17 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to GitHub issue numbers.
 
+Luggage 3.6.11, 2020-05-20
+Drupal 7.70, 2020-05-20
+-------------------------
+- LUGG-1211 Drupal 7.70 SA-CORE-2020-002 SA-CORE-2020-003
+
+Luggage 3.6.10, 2020-03-09
+Drupal 7.69, 2019-12-18
+-------------------------
+- LUGG-1147 - Resolve Undefined index: prepare callback in ckeditor_filter_xss().
+- LUGG-1194 - Turn off SCAYT Plugin https://raw.githubusercontent.com/isubit/luggage_ckeditor/master/ckeditor_disable_scayt.php
+
 Luggage 3.6.9, 2019-12-18
 Drupal 7.69, 2019-12-18
 -------------------------
