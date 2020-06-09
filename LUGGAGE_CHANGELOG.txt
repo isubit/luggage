@@ -2,10 +2,16 @@ How to read this changelog:
 
 The LUGG- prefix refers to JIRA issue numbers; the # prefix refers to GitHub issue numbers.
 
+Luggage 3.6.12, 2020-06-09
+Drupal 7.71, 2020-06-03
+-------------------------
+- LUGG-1212 - Drupal 7.71 feature release (fix ajax bug in Chrome)
+- LUGG-1207 - SA-CONTRIB-2020-007 Update CKEditor module 1.19 and library to 4.14
+
 Luggage 3.6.11, 2020-05-20
 Drupal 7.70, 2020-05-20
 -------------------------
-- LUGG-1211 Drupal 7.70 SA-CORE-2020-002 SA-CORE-2020-003
+- LUGG-1211 - Drupal 7.70 SA-CORE-2020-002 SA-CORE-2020-003
 
 Luggage 3.6.10, 2020-03-09
 Drupal 7.69, 2019-12-18
