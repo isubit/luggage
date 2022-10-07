@@ -4,7 +4,7 @@ Luggage
 
 Introduction
 -------------------
-Luggage is a platform for building/maintaining academic websites. The platform is built on Drupal 7 and consists of features that come with configuration. The goal is to empower web developers to quickly leverage common use cases so that sites can be up and running quickly but maintain the ability to customize features or add additional features. [Contributions](http://luggagedocs.info/contributing) are welcome!
+Luggage is a platform for building/maintaining academic websites. The platform is built on Drupal 7 and consists of features that come with configuration. The goal is to empower web developers to quickly leverage common use cases so that sites can be up and running quickly but maintain the ability to customize features or add additional features. 
 
 Some of the features found in Luggage are:
 
@@ -25,8 +25,6 @@ The overriding design goal for the Luggage platform is to provide discrete featu
 * [Luggage ISU](http://github.com/isubit/luggage_isu) - Downstream fork with theme and configuration for Iowa State University.
 * Your Fork - Since Luggage is generic and has no theme, you may want to create your own fork for your organization.
 
-More about Luggage can be found at http://luggagedocs.info
-
 Requirements
 -----------------
 * [Drush](http://www.drush.org/) 5.9 or later
@@ -43,8 +41,6 @@ Installation
 * `bash scripts/build_luggage.sh` It may be helpful to define bash environment variables for `$APACHEUSER` and `$DBCREDS`. It will assume your database is at localhost unless you have defined a different host in `$DBHOST`.
 * If the installation script is successful, it will provide you with a one-time log in link for the admin user.
 
-More verbose instructions can be found at http://luggagedocs.info/installing-luggage-scratch
-
 Versions
 ----
 Development of Luggage takes place on the 'development' branch in Github. Pull requests should be made against the 'development' branch.
@@ -59,16 +55,6 @@ Contributing
 Refer to the [Luggage git architecture](http://www.biology-it.iastate.edu/luggage_doc/comprehensive-code-flow-management). Pull requests against the development branch are encouraged.
 
 Refer to the [contribution documentation](http://www.biology-it.iastate.edu/luggage_doc/luggage-development)
-
-Troubleshooting
-----
-Read or search http://luggagedocs.info
-
-Join us on IRC FreeNode @ #luggage
-* Need help setting up IRC? https://www.drupal.org/irc/setting-up
-
-Travis-CI - https://travis-ci.org/isubit/luggage
-* Reports into IRC FreeNode @  ##luggage
 
 Thanks
 ----
